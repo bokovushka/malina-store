@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Single product"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/header.html',{})
+		<main id="single-product" class="single-product">
+			<div class="content">
+				<div class="entry-content">
+					@@include('template-parts/breadcrumbs.html')
+					@@include('template-parts/single-product/info.html')
+					@@include('template-parts/single-product/collection.html')
+					@@include('template-parts/single-product/related.html')
+				</div>
+			</div>
+		</main>
+		@@include('html/footer.html',{})
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/libs.min.js"></script>
+	<script src="files/bootstrap/_bootstrap-custom.js"></script>
+	<script src="files/bootstrap-select/_bootstrap-select-custom.js"></script>
+	<script src="files/bootstrap-slider/_bootstrap-slider-custom.js"></script>
+	<script src="files/slick-slider/_slick-custom.js"></script>
+	<script src="files/inputmask/_inputmask-custom.js"></script>
+	<script src="files/fancybox/_fancybox-custom.js"></script>
+	<script src="js/main.min.js"></script>
+</body>
+
+</html>

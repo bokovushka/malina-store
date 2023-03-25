@@ -1,0 +1,163 @@
+//banner-top
+.banner-top-inner {
+	@media (max-width: 1536px) {
+		margin: 0 -16px;
+	}
+}
+.banner-top-left-side {
+	background: url(@img/Bitmap-bg.jpeg) no-repeat center;
+	background-size: cover;
+	max-height: 600px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	@include lg-max {
+		max-height: 312px;
+	}
+	.btn {
+		max-width: 215px;
+		margin: 0 auto;
+		width: 100%;
+		@include lg-max {
+			padding: 5px;
+			font-size: 14px;
+			line-height: 18px;
+		}
+	}
+	.circle-img {
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		overflow: hidden;
+		@include lg-max {
+			width: 103px;
+			height: 103px;
+		}
+		img {
+			width: inherit;
+			height: inherit;
+			object-fit: cover;
+		}
+	}
+}
+.banner-top-wallpaper {
+	margin-left: -16px;
+	.banner-top-wallpaper-inner {
+		overflow: hidden;
+		height: 100%;
+		margin: 0 -16px;
+		margin-right: -17px;
+	}
+}
+.swiper-wallpaper-collection {
+	max-height: 600px;
+	height: 100%;
+	@include lg-max {
+		max-height: 312px;
+	}
+	@include xs-max {
+		max-height: 195px;
+	}
+	img {
+		height: 100%;
+		object-fit: cover;
+		object-position: right bottom;
+	}
+}
+.swiper-wallpaper-collection-head {
+	font-family: "GaugePro";
+	font-size: 15px;
+	line-height: 24px;
+}
+.swiper-wallpaper-collection-thumbs {
+	font-family: "GaugePro";
+	@include xl-max {
+		display: flex;
+		.show-more-button {
+			.btn {
+				width: max-content;
+				font-size: 15px;
+				line-height: 24px;
+				padding: 2px 10px;
+				box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+				@include transition(0.3s ease-out 0s);
+				&:hover {
+					background: $black-custom;
+					color: $white;
+				}
+			}
+			@include sm-max {
+				margin-bottom: 10px;
+			}
+		}
+	}
+	@include xl-max {
+		flex-wrap: wrap;
+		.swiper-wrapper {
+			height: max-content;
+			max-width: max-content;
+			margin: 0;
+			flex-wrap: wrap;
+		}
+		.swiper-slide {
+			margin-bottom: 10px;
+		}
+	}
+	.swiper-slide {
+		font-size: 15px;
+		line-height: 24px;
+		padding: 4px 12px;
+		box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+		max-width: max-content;
+		width: 100% !important;
+		cursor: pointer;
+		@include transition(0.3s ease-out 0s);
+		span {
+			font-family: "TTNorms";
+			margin-left: 12px;
+			opacity: 0.6;
+		}
+		&.swiper-slide-thumb-active,
+		&:hover {
+			background: $black-custom;
+			color: $white;
+		}
+	}
+}
+.swiper-wallpaper-collection-buttons {
+	display: flex;
+	gap: 8px;
+	svg {
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		border: 2px solid $black-custom;
+		fill: $black-custom;
+	}
+	.button-prev {
+		transform: scaleX(-1);
+	}
+	.button-next,
+	.button-prev {
+		&:not(.swiper-button-disabled):hover {
+			svg {
+				fill: $white;
+				background: $black-custom;
+			}
+		}
+	}
+	.swiper-button-disabled {
+		cursor: default;
+		svg {
+			opacity: 0.3;
+		}
+	}
+}
+//partners
+.partners {
+	img {
+		max-width: 218px;
+		margin: 0 auto;
+	}
+}

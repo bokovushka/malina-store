@@ -1,0 +1,32 @@
+// b-archive-catalog-filter-top 
+
+#b-archive-catalog-filter-top{
+  .slider-catalog-category{
+    margin: 0 -15px;
+    .slide{
+      padding: 15px;
+    }
+    .slide-category{
+      box-shadow: 2px 6px 16px -4px rgba(0, 0, 0, 0.12);
+      &-link{
+        &:hover{
+          text-decoration: none;
+        }
+      }
+      &-image{
+        width: 60px;
+        height: 60px;
+      }
+      &-name{
+        font-family: 'GaugePro Text';
+        font-size: 17px;
+        line-height: 24px;
+      }
+      &-options{
+        font-size: 14px;
+        line-height: 24px;
+        opacity: 0.5;
+      }
+    }
+  }
+}

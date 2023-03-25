@@ -1,0 +1,203 @@
+//b-single-product-info
+
+#b-single-product-info{
+  padding: 80px 0;
+  @include xs-max{
+    padding: 0;
+    margin-bottom: 40px;
+  }
+  .product-info-wrapper{
+    z-index: 1;
+    padding: 55px 65px;
+    @include lg-max{
+      padding: 55px;
+    }
+    @include sm-max{
+      padding: 40px;
+    }
+    @include xs-max{
+      padding: 0;
+    }
+    .product-info-small-slider{
+      &.slick-slider{
+        .slick-list{
+          text-align: right;
+          .slick-slide{
+            border: 2px solid $white;
+            div{
+              max-width: 124px;
+              max-height: 180px;
+              margin-left: auto;
+              position: relative;
+              @include lg-max{
+                max-width: 104px;
+                max-height: 160px;
+              }
+              &:before{
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: transparent;
+                @include transition(.3s ease-out 0s);
+              }
+            }
+            &.slick-current{
+              div{
+                &:before{
+                  @include transition(.3s ease-out 0s);
+                  background: rgba(255, 255, 255, 0.75);
+                }
+              }
+            }
+          }
+        }
+        &.slick-dotted{
+          margin-top: auto;
+          margin-bottom: auto;
+        }
+        .slick-prev, .slick-next{
+          transform: rotate(90deg);
+          border-color: $black-custom;
+        }
+        .slick-prev{
+          top: -55px;
+          right: 45px;
+          left: auto;
+        }
+        .slick-next{
+          top: auto;
+          bottom: -55px;
+          right: 45px;
+          left: auto;
+        }
+        .slick-dots{
+          width: auto;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          li{
+            display: flex;
+          }
+        }
+      }
+      .small-slider-slide{
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        @include lg-min{
+          &:hover{
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .product-info-big-slider{
+      .slick-slide{
+        img{
+          margin: 0 auto;
+        }
+      }
+      &:after{
+        content: '';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+        background-color: $white;
+        box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15);
+        background-image: url(../img/product-info-icon.svg);
+        border-radius: 50%;
+        @include transition(.3s ease-out 0s);
+      }
+      @include lg-min{
+        &:hover{
+          cursor: pointer;
+          &:after{
+            @include transition(.3s ease-out 0s);
+            background-color: $black-custom;
+            background-image: url(../img/product-info-icon-hover.svg);
+          }
+        }
+      }
+    }
+    .cta-socials{
+      li{
+        &:not(:last-child){
+          margin-right: 16px;
+        }
+        .link-soc{
+          &:hover{
+            background-color: transparent;
+          }
+        }
+      }
+    }
+    .product-info-content{
+      @include xs-max{
+        padding: 0 16px;
+      }
+      .info-content{
+        &-code{
+
+        }
+        &-name{
+  
+        }
+        &-price{
+          font-size: 22px;
+          line-height: 29px;
+          font-weight: 500;
+        }
+        &-stock{
+          font-size: 18px;
+          line-height: 24px;
+          font-weight: 500;
+          color: #39AB6B;
+        }
+        &-add{
+          .btn-dark{
+            max-width: 100%;
+            padding: 0.625rem 1rem;
+            @media(max-width: 340px){
+              padding: 0.625rem 0.4rem;
+            }
+          }
+        }
+        &-table{
+          .table{
+            &-item{
+              &:not(:last-child){
+                padding-bottom: 7px;
+                margin-bottom: 12px;
+                border-bottom: 1px dashed #DDDDDD;
+              }
+            }
+            &-name{
+              font-weight: 500;
+            }
+            &-value{
+              .link-color{
+                width: 30px;
+                height: 30px;
+                &:not(:last-child){
+                  margin-right: 8px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

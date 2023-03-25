@@ -1,0 +1,8 @@
+//page-cart
+
+#page-cart{
+  @import 'template-parts/page-cart/list-product';
+  @import 'template-parts/page-cart/will-need';
+  @import 'template-parts/page-cart/total-info';
+  @import 'template-parts/page-cart/discount';
+}

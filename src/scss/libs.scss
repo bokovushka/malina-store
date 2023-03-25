@@ -1,0 +1,27 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/swiper/swiper-bundle";
+@import "files/jquery.fancybox.scss";
+
+//відступи
+.container {
+	@each $breakpoint, $gutter in $grid-gutter-widths {
+		@include media-breakpoint-up($breakpoint) {
+			@include make-container($gutter);
+		}
+	}
+}
+.row {
+	@each $breakpoint, $gutter in $grid-gutter-widths {
+		@include media-breakpoint-up($breakpoint) {
+			@include make-row($gutter);
+		}
+	}
+	.row > .col,
+	.row > [class*="col-"] {
+		@each $breakpoint, $gutter in $grid-gutter-widths {
+			@include media-breakpoint-up($breakpoint) {
+				@include make-col-ready($gutter);
+			}
+		}
+	}
+}

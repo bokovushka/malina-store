@@ -1,0 +1,38 @@
+// b-page-cart-will-need
+
+#b-page-cart-will-need{
+  .will-need{
+    &-title{
+      font-size: 21px;
+      line-height: 32px;
+      font-weight: 500;
+    }
+    &-slider{
+      padding-bottom: 80px;
+      .slick-list{
+        margin: 0 -32px;
+      }
+      .card-needed{
+        padding: 0 32px;
+      }
+      .slick-dots{
+        bottom: 10px;
+      }
+      .slick-prev, .slick-next{
+        top: auto;
+        bottom: 0;
+        border-color: $black-custom;
+        &:before{
+          color: $black-custom;
+        }
+      }
+      .slick-next{
+        right: 0;
+      }
+      .slick-prev{
+        left: auto;
+        right: 45px;
+      }
+    }
+  }
+}
