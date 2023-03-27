@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"404"
+})
+
+<body class="not-found-p">
+	<div class="wrapper">
+		@@include('html/header.html',{})
+		<main class="main">
+			<div class="content">
+				<section class="not-found position-relative">
+					<div class="container">
+						<div class="row">
+							<div class="col-1 d-none d-lg-block"></div>
+							<div class="col col-lg-auto text-center text-lg-left">
+								<div class="not-found-content mx-auto mx-lg-0">
+									<div class="head mb-5">Страницы не существует</div>
+									<a class="btn-back mx-auto mb-20 mr-lg-0 ml-lg-0" href="##">
+										<span class="mr-2">На главную</span>
+										<svg>
+											<use xlink:href="img/icons/icons.svg#i-arrow"></use>
+										</svg>
+									</a>
+								</div>
+								<ul class="bottom-socials list-inline mb-0">
+									<li class="list-inline-item">
+										<a href="tel:+" class="link-soc" target="_blank">
+											<svg>
+												<use xlink:href="@img/icons/icons.svg#i-instagram"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="list-inline-item">
+										<a href="##" class="link-soc" target="_blank">
+											<svg>
+												<use xlink:href="@img/icons/icons.svg#i-twitter"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="list-inline-item">
+										<a href="##" class="link-soc" target="_blank">
+											<svg>
+												<use xlink:href="@img/icons/icons.svg#i-facebook"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="list-inline-item">
+										<a href="##" class="link-soc" target="_blank">
+											<svg>
+												<use xlink:href="@img/icons/icons.svg#i-pinterest"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="w-100 d-lg-none"></div>
+							<div class="col position-relative mt-4 mt-lg-0">
+								<img class="not-found-img d-none d-md-block" src="img/404.png" alt="Not-found">
+								<img class="not-found-img d-md-none" src="img/404-m.png" alt="Not-found">
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+		<!-- @@include('html/footer.html',{}) -->
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.min.js"></script>
+</body>
+
+</html>

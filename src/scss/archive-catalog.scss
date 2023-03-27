@@ -1,8 +1,8 @@
 //b-archive
 
 #arсhive-catalog {
-	@import "template-parts/archive-catalog/filter-top";
-	@import "template-parts/archive-catalog/filter-full";
-	@import "template-parts/archive-catalog/filter-left";
-	@import "template-parts/archive-catalog/list-products";
+	@import "parts/archive-catalog/filter-top";
+	@import "parts/archive-catalog/filter-full";
+	@import "parts/archive-catalog/filter-left";
+	@import "parts/archive-catalog/list-products";
 }

@@ -43,6 +43,7 @@
 		"gulp-webp-html-nosvg": "latest",
 		"gulp-webpcss": "latest",
 		"gulp-zip": "latest",
+		"plyr": "latest",
 		"sass": "latest",
 		"swiper": "latest",
 		"vinyl-ftp": "latest",

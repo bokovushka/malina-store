@@ -1,6 +1,6 @@
 //page-checkout
 
-#page-checkout{
-  @import 'template-parts/page-checkout/order-data';
-  @import 'template-parts/page-checkout/order-info';
+#page-checkout {
+	@import "parts/page-checkout/order-data";
+	@import "parts/page-checkout/order-info";
 }

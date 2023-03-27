@@ -1,41 +1,61 @@
+import Swiper from 'swiper/bundle';
+
+//swiper-wallpaper-collection-thumbs
+var SwiperWallpaperCollectionThumbs = new Swiper('.swiper-wallpaper-collection-thumbs', {
+	slidesPerView: 2,
+	spaceBetween: 10,
+	freeMode: true,
+	watchSlidesProgress: true,
+});
+
+//swiper-wallpaper-collection
 var SwiperWallpaperCollection = new Swiper('.swiper-wallpaper-collection', {
-	direction: 'horizontal',
-	slidesPerView: 1,
-	spaceBetween: 30,
 	grabCursor: true,
-	// freeMode: true,
-	// breakpoints: {
-	// 	1200: {
-	// 		slidesPerView: 3,
-	// 		grabCursor: false,
-	// 		spaceBetween: 30,
-	// 	},
-	// 	1120: {
-	// 		slidesPerView: 2.6,
-	// 		spaceBetween: 22,
-	// 	},
-	// 	992: {
-	// 		slidesPerView: 2.3,
-	// 		spaceBetween: 22,
-	// 	},
-	// 	768: {
-	// 		slidesPerView: 2,
-	// 		spaceBetween: 22,
-	// 	},
-	// 	680: {
-	// 		slidesPerView: 1.6,
-	// 		spaceBetween: 17,
-	// 	},
-	// 	576: {
-	// 		slidesPerView: 1.4,
-	// 		spaceBetween: 17,
-	// 	},
-	// 	412: {
-	// 		slidesPerView: 1,
-	// 		spaceBetween: 20,
-	// 		grid: {
-	// 			rows: 3,
-	// 		},
-	// 	},
-	// },
+	navigation: {
+		nextEl: ".banner-top .swiper-buttons .button-slider-next",
+		prevEl: ".banner-top .swiper-buttons .button-slider-prev",
+	},
+	thumbs: {
+		swiper: SwiperWallpaperCollectionThumbs,
+	},
+});
+
+//swiper-wallpaper-collection
+var SwiperCardsProducts = new Swiper('.swiper-cards-products', {
+	spaceBetween: 16,
+	navigation: {
+		nextEl: ".product-collection-slider .swiper-buttons .button-slider-next",
+		prevEl: ".product-collection-slider .swiper-buttons .button-slider-prev",
+	},
+	pagination: {
+		el: ".product-collection-slider .swiper-pagination",
+		clickable: true,
+	},
+	breakpoints: {
+		1200: {
+			slidesPerView: 4,
+			spaceBetween: 32,
+		},
+		768: {
+			slidesPerView: 3,
+		},
+		375: {
+			spaceBetween: 20,
+			slidesPerView: 2,
+			grid: {
+				rows: 2,
+				fill: "row",
+			},
+		}
+	},
+});
+
+//swiper-collection-preview
+var SwiperCollectionPreview = new Swiper('.swiper-collection-preview', {
+	slidesPerView: 1,
+	grabCursor: true,
+	navigation: {
+		nextEl: ".swiper-collection-preview .swiper-buttons .button-slider-next",
+		prevEl: ".swiper-collection-preview .swiper-buttons .button-slider-prev",
+	},
 });

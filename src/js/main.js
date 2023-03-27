@@ -8,9 +8,9 @@ import * as Menu from "./template-parts/_menu.js";
 import * as AnimateScroll from "./template-parts/_animate-scroll.js";
 import * as ShowMenu from "./template-parts/_show-menu.js";
 // import * as SlickSlider from "./template-parts/_slick-slider.js";
-import * as InputRange from "./template-parts/_input-range.js";
-import * as CustomSelect from "./template-parts/_custom-select.js";
-import * as CheckboxActive from "./template-parts/_checkbox-active.js";
+// import * as InputRange from "./template-parts/_input-range.js";
+// import * as CustomSelect from "./template-parts/_custom-select.js";
+// import * as CheckboxActive from "./template-parts/_checkbox-active.js";
 
 $('.link-color').click(function (e) {
 	e.preventDefault();
