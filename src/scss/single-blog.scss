@@ -1,0 +1,167 @@
+.article {
+	.article-title {
+		font-family: "GaugePro";
+		font-size: 48px;
+		line-height: 56px;
+	}
+	.article-subtitle {
+		font-size: 24px;
+		line-height: 36px;
+	}
+	.article-img {
+		max-height: 600px;
+		object-fit: cover;
+	}
+	p {
+		margin-bottom: 0;
+		font-size: 20px;
+		line-height: 32px;
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+		a {
+			color: $red-light-custom;
+			display: inline-block;
+		}
+	}
+	.quote {
+		.content {
+			font-family: "GaugePro";
+			font-style: italic;
+			font-size: 36px;
+			line-height: 48px;
+			font-weight: 300;
+			color: $blockquote-custom;
+		}
+		svg {
+			width: 36px;
+			height: 36px;
+		}
+		.quote-author {
+			img {
+				width: 80px;
+				height: 80px;
+				object-fit: cover;
+				border-radius: 50%;
+			}
+			.quote-author-name {
+				font-size: 20px;
+				line-height: 24px;
+			}
+			.quote-author-position {
+				font-size: 13px;
+				line-height: 18px;
+				text-transform: uppercase;
+			}
+		}
+	}
+	.article-img-preview {
+		img {
+			height: 915px;
+			object-fit: cover;
+		}
+		.item {
+			&:first-child {
+				// .btn-tooltip-preview {
+				// 	top: 30%;
+				// 	left: 20%;
+				// }
+			}
+			&:last-child {
+				// .btn-tooltip-preview {
+				// 	top: 20%;
+				// 	left: 50%;
+				// 	transform: translateX(-50%);
+				// }
+			}
+		}
+		.wrap {
+			position: relative;
+		}
+	}
+}
+.btn-tooltip-preview {
+	width: max-content;
+	line-height: 0;
+	padding: 14px;
+	background: $white;
+	border-radius: 50%;
+	border: none;
+	position: relative;
+	z-index: 2;
+	cursor: pointer;
+	&:hover {
+		background: $red-light-custom;
+		svg {
+			fill: $white;
+		}
+	}
+	svg {
+		width: 16px;
+		height: 16px;
+		fill: $black-custom;
+	}
+}
+.tooltip-preview {
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translateX(-50%);
+	&.active,
+	&:hover {
+		.sub-menu {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	.sub-menu {
+		width: 140px;
+		position: absolute;
+		top: 21px;
+		left: 50%;
+		transform: translateX(-50%);
+		opacity: 0;
+		visibility: hidden;
+		@include transition(0.3s ease-out 0s);
+	}
+	.card-product .card-content {
+		.card-link {
+			padding: 0px 8px 8px 8px;
+		}
+		.card-link-image {
+			margin-right: -8px;
+			margin-left: -8px;
+			margin-bottom: 8px;
+		}
+		.card-link-title {
+			font-size: 14px;
+			line-height: 22px;
+		}
+		.card-link-price {
+			margin-bottom: 0;
+			font-size: 16px;
+		}
+	}
+}
+.article-brand-excerpt {
+	.btn-ahead {
+		font-weight: 500;
+	}
+	.content {
+		font-family: "GaugePro";
+		font-style: italic;
+		font-weight: 400;
+		font-size: 26px;
+		line-height: 36px;
+	}
+	.btn-article-brand {
+		display: inline-block;
+	}
+	.btn-ahead {
+		font-family: "TT Norms";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 24px;
+	}
+}

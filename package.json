@@ -17,6 +17,8 @@
 		"gulp-cli": "^2.3.0"
 	},
 	"devDependencies": {
+		"@fancyapps/ui": "^5.0.13",
+		"@popperjs/core": "^2.11.7",
 		"bootstrap": "^4.6.2",
 		"browser-sync": "latest",
 		"del": "latest",
