@@ -76,6 +76,51 @@ hr {
 		line-height: 24px;
 	}
 }
+.h1,
+h1 {
+	font-size: 48px;
+	line-height: 56px;
+}
+.h2,
+h2 {
+	font-size: 40px;
+	line-height: 48px;
+}
+.h3,
+h3 {
+	font-size: 32px;
+	line-height: 40px;
+}
+.h4,
+h4 {
+	font-size: 24px;
+	line-height: 36px;
+}
+.h5,
+h5 {
+	font-size: 20px;
+	line-height: 32px;
+}
+.h6,
+h6 {
+	font-size: 12px;
+	line-height: 14px;
+}
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 0;
+	font-family: "GaugePro";
+}
 img {
 	display: block;
 	width: 100%;
@@ -1328,12 +1373,12 @@ ul.list-inline-categories {
 							font-weight: 400;
 						}
 					}
+					&:hover {
+						box-shadow: 0px 4px 24px -8px rgba(0, 0, 0, 0.12);
+						@include transition(0.3s ease-out 0s);
+					}
 					@include lg-min {
 						padding: 16px;
-						&:hover {
-							box-shadow: 0px 4px 24px -8px rgba(0, 0, 0, 0.12);
-							@include transition(0.3s ease-out 0s);
-						}
 					}
 				}
 			}
@@ -1421,8 +1466,19 @@ ul.list-inline-categories {
 			.card-content {
 				.plyr--video {
 					margin-bottom: 20px;
+					&.plyr--paused {
+						opacity: 1;
+					}
 					&.plyr--paused .plyr__poster {
 						background-position: bottom;
+					}
+					.plyr__control--overlaid {
+						width: 80px;
+						height: 80px;
+						svg {
+							width: 30px;
+							height: 30px;
+						}
 					}
 				}
 				.plyr--video,
@@ -2377,12 +2433,17 @@ ul.list-inline-categories {
 		}
 	}
 	.plyr__control--overlaid {
-		width: 120px !important;
+		width: 120px;
 		height: 120px;
 		border: 2px solid $white;
 		background: transparent;
 		&:hover {
-			background: transparent !important;
+			border-color: $white;
+			background: $white;
+			svg {
+				fill: $black-custom;
+				stroke: $black-custom;
+			}
 		}
 		svg {
 			width: 45px;
@@ -2417,6 +2478,10 @@ ul.list-inline-categories {
 	.is-prev {
 		width: 96px;
 		height: 96px;
+		@include sm-max {
+			width: 50px;
+			height: 50px;
+		}
 		svg {
 			width: inherit;
 			height: inherit;
@@ -2499,5 +2564,34 @@ ul.list-inline-categories {
 	}
 	#next-page {
 		margin-left: 80px;
+	}
+}
+.plyr--video.plyr--paused {
+	&.plyr--youtube {
+		opacity: 1;
+		.plyr__control--overlaid {
+			width: 70px;
+			height: 70px;
+			border: 2px solid $red-light-custom;
+			background: #ff6662;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			@include sm-max {
+				width: 40px;
+				height: 40px;
+				padding: 12px;
+			}
+			svg {
+				width: 24px;
+				height: 24px;
+				fill: $white;
+				stroke: $white;
+			}
+			&:hover {
+				background: $black-custom !important;
+				border-color: $black-custom;
+			}
+		}
 	}
 }

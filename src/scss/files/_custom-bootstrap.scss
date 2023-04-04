@@ -138,7 +138,7 @@ $container-max-widths: (
 	// sm: 576px,
 	// md: 768px,
 	// lg: 992px,
-	xxxl: 1536px
+	xxl: 1536px
 );
 
 $grid-breakpoints: (
@@ -164,7 +164,7 @@ $font-family-sans-serif: "TTNorms", sans-serif !default;
 $font-family-base: $font-family-sans-serif !default;
 
 $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
-$line-height-base: 1.75 !default;
+$line-height-base: 1.5 !default;
 
 //components
 //btn-sm

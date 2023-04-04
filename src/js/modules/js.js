@@ -71,3 +71,40 @@ $(".btn-tooltip-preview").click(function () {
 $(".tooltip-preview .sub-menu").click(function () {
 	$(this).closest(".tooltip-preview").addClass("active");
 });
+
+//? tooltip //single-blog page
+
+$(function () {
+	$('.article .share .share-buttons').each(function () {
+		var w = screen.width;
+		if (w < '576') {
+			var value = 3;
+		}
+		else {
+			if (w < '768') {
+				var value = 4;
+			}
+			else {
+				if (w < '1400') {
+					var value = 5;
+				}
+				else {
+					if (w < '1600') {
+						var value = 7;
+					}
+				}
+			}
+		}
+		let max = value;
+		let items = $(this).find('.btn-share'),
+			len = items.length;
+		if (len > max) {
+			items = items.slice(max, len);
+			items.wrapAll('<div class="hide"></div>');
+			$(this).append('<div class="btn-share btn-share-more"><div class="icon"><svg><use xlink:href="img/icons/icons.svg#i-share-more"></use></svg></div><div class="btn-share-title">Еще</div></div>');
+		}
+	}).on('click', '.btn-share-more', function () {
+		$(this).closest('.article .share .share-buttons').find('.hide > .btn-share').unwrap();
+		$(this).remove();
+	});
+})
