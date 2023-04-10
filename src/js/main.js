@@ -1,14 +1,9 @@
-// import * as functions from "./modules/functions.js";
-// functions.isWebp();
 import * as InputCounter from "./modules/input-counter.js";
-// import * as Inputmask from "./template-parts/_inputmask.js";
 import * as MoreBlocks from "./modules/more-blocks.js";
 import * as Burger from "./modules/burger.js";
 import * as Menu from "./modules/menu.js";
 import * as AnimateScroll from "./modules/animate-scroll.js";
 import * as ShowMenu from "./modules/show-menu.js";
-// import * as SlickSlider from "./template-parts/_slick-slider.js";
-// import * as InputRange from "./template-parts/_input-range.js";
-// import * as CustomSelect from "./template-parts/_custom-select.js";
-// import * as CheckboxActive from "./template-parts/_checkbox-active.js";
+import * as CheckboxActive from "./modules/checkbox-active.js";
+import * as Pagination from "./modules/pagination.js";
 import * as JS from "./modules/js.js";

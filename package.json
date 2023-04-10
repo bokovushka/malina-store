@@ -17,11 +17,13 @@
 		"gulp-cli": "^2.3.0"
 	},
 	"devDependencies": {
-		"@fancyapps/ui": "^5.0.13",
-		"@popperjs/core": "^2.11.7",
+		"@fancyapps/ui": "latest",
+		"@popperjs/core": "latest",
 		"bootstrap": "^4.6.2",
 		"browser-sync": "latest",
+		"chosen-js": "^1.8.7",
 		"del": "latest",
+		"fastselect": "latest",
 		"gulp": "latest",
 		"gulp-autoprefixer": "latest",
 		"gulp-clean-css": "latest",
@@ -47,6 +49,7 @@
 		"gulp-zip": "latest",
 		"plyr": "latest",
 		"sass": "latest",
+		"svelte-range-slider-pips": "latest",
 		"swiper": "latest",
 		"vinyl-ftp": "latest",
 		"webp-converter": "2.2.3",

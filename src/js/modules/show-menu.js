@@ -7,7 +7,7 @@ showMenu($(".header-main-menu .brand-menu .nolink"), $(".header-main-menu .brand
 
 // showMenu($(".b-archive-catalog-filter-left"), $(".b-archive-catalog-filter-top .btn-filter, .b-archive-catalog-filter-left .btn-close"));
 
-if (window.innerWidth > 992) {
+if (window.innerWidth > 991) {
 	showMenu($(".header-main-desktop .search .i-search"), $(".header-main-desktop .search .sub-menu"), $(".header-main-desktop .search"));
 }
 if (window.innerWidth < 992) {

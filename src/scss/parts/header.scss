@@ -444,6 +444,7 @@
 				font-weight: 400;
 				padding-right: 27px;
 				position: relative;
+				cursor: pointer;
 				@include md-max {
 					padding-right: 0;
 					width: 100%;
@@ -474,27 +475,14 @@
 					visibility: hidden;
 					@include transition(0.3s ease-out 0s);
 				}
-				&.active {
+				&.active,
+				&:hover {
 					.sub-menu {
 						opacity: 1;
 						visibility: visible;
 						@include transition(0.3s ease-out 0s);
 					}
 					span {
-						&:after {
-							transform: scaleY(-1);
-							@include transition(0.3s ease-out 0s);
-						}
-					}
-				}
-				@include lg-min {
-					&:hover {
-						cursor: pointer;
-						.sub-menu {
-							opacity: 1;
-							visibility: visible;
-							@include transition(0.3s ease-out 0s);
-						}
 						&:after {
 							transform: scaleY(-1);
 							@include transition(0.3s ease-out 0s);

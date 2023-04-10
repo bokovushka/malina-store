@@ -4,7 +4,7 @@ $black: #000000 !default;
 
 $black-custom: #1d1d23 !default;
 $silver-custom: #88888e !default;
-$silver-lighten-custom: #f4f4f6 !default;
+$silver-light-custom: #f4f4f6 !default;
 $blue-custom: #22294f !default;
 $pink-custom: #e8bbb7 !default;
 $ocean-custom: #abdcd7 !default;
@@ -47,7 +47,7 @@ $colors: map-merge(
 		"black": $black,
 		"black-custom": $black-custom,
 		"silver-custom": $silver-custom,
-		"silver-lighten-custom": $silver-lighten-custom,
+		"silver-light-custom": $silver-light-custom,
 		"blue-custom": $blue-custom,
 		"pink-custom": $pink-custom,
 		"ocean-custom": $ocean-custom,
@@ -92,7 +92,7 @@ $theme-colors: map-merge(
 		"black": $black,
 		"black-custom": $black-custom,
 		"silver-custom": $silver-custom,
-		"silver-lighten-custom": $silver-lighten-custom,
+		"silver-light-custom": $silver-light-custom,
 		"blue-custom": $blue-custom,
 		"pink-custom": $pink-custom,
 		"ocean-custom": $ocean-custom,

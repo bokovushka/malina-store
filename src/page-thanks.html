@@ -5,7 +5,7 @@
 })
 
 <body>
-	<div class="wrapper">
+	<div id="wrapper" class="wrapper">
 		@@include('html/header.html',{})
 		<main id="page-thanks" class="page-thanks">
 			<div class="content">
@@ -16,9 +16,7 @@
 		</main>
 		@@include('html/footer.html',{})
 	</div>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/libs.min.js"></script>
-	<script src="js/main.min.js"></script>
+	@@include('html/scripts.html',{})
 </body>
 
 </html>
