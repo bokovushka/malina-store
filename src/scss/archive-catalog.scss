@@ -204,6 +204,7 @@
 	.input-currency {
 		display: flex;
 		border: 1px solid #e4e4eb;
+		height: 48px;
 		input {
 			all: unset;
 			width: 100%;
@@ -216,6 +217,9 @@
 		padding: 14px;
 		background: rgba(228, 228, 235, 0.3);
 		border-right: 1px solid $silver-light-custom;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 	.rangeSlider {
 		background: transparent;
@@ -276,12 +280,18 @@
 		top: 35px;
 		z-index: 1;
 	}
+	&.price-slider-full-m {
+		.currency-wrap {
+			gap: 0 !important;
+		}
+	}
 }
 //select search
 .filter-item--brands,
 .filter-item--subject {
 	.fstElement {
 		width: 100%;
+		border: none;
 		&:hover {
 			.fstControls {
 				box-shadow: 0 0 0 10px $silver-light-custom;
@@ -304,7 +314,8 @@
 				}
 			}
 			.fstResultItem,
-			.fstGroupTitle {
+			.fstGroupTitle,
+			.fstNoResults {
 				padding: 11px 24px;
 				font-size: 17px;
 				line-height: 24px;
@@ -313,7 +324,7 @@
 			.fstFocused {
 				background: $silver-light-custom;
 				border-color: $silver-light-custom;
-				color: $black-custom;
+				color: $red-light-custom;
 			}
 		}
 		.fstControls {
@@ -406,12 +417,18 @@
 		border: none;
 	}
 	.filter-item--colors .color-wrapper {
-		flex: 1 0 12.5%;
+		flex: 0 0 12.5%;
 		@include xl-max {
-			flex: 1 0 14.25%;
+			flex: 0 0 14.25%;
 		}
 		@include lg-max {
-			flex: 1 0 16.6%;
+			flex: 0 0 16.6%;
+		}
+		@include lg-max {
+			flex: 0 0 auto;
+		}
+		@media (max-width: 425px) {
+			flex: 0 0 25%;
 		}
 	}
 	.filter-item--brands .brands {
@@ -438,6 +455,12 @@
 			.input-currency {
 				width: 100%;
 			}
+			&.price-slider-full-m {
+				.rangeBar-full {
+					width: calc(100% - 32px);
+					bottom: 50px;
+				}
+			}
 		}
 	}
 }
@@ -454,9 +477,16 @@
 }
 .filter-item--subject .subjects,
 .filter-item--brands .brands {
+	@include md-max {
+		overflow-y: scroll;
+		max-height: 390px !important;
+	}
 	&.show-more {
 		max-height: 2515px;
 		overflow: hidden;
+		@include md-max {
+			max-height: 300px;
+		}
 	}
 }
 .filter-views {
@@ -475,7 +505,16 @@
 		display: flex;
 		align-items: center;
 		padding: 6px 10px 6px 20px;
-		border: 1px solid $black-custom;
+		border: 1px solid rgba(29, 29, 35, 0.15);
+		&:hover {
+			border: 1px solid $black-custom;
+			.i-close {
+				opacity: 1;
+			}
+			.content {
+				text-decoration-line: line-through;
+			}
+		}
 		.i-close {
 			background: $black-custom;
 			border-radius: 50%;
@@ -486,6 +525,7 @@
 			justify-content: center;
 			margin-left: 17px;
 			cursor: pointer;
+			opacity: 0.15;
 			svg {
 				fill: $white;
 				width: 6px;
@@ -520,5 +560,9 @@
 	.btn {
 		width: max-content;
 		min-width: 320px;
+		@include sm-max {
+			min-width: auto;
+			width: 100%;
+		}
 	}
 }

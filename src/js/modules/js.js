@@ -123,7 +123,7 @@ $('.filter-item--colors .link-color').click(function () {
 	$(this).toggleClass("active");
 });
 
-//?archive-catalog page //more button
+//? archive-catalog page //more button
 $(".btn-show-more").click(function () {
 	if ($(this).closest(".filter-item").find(".content-checkoxs").hasClass("show-more")) {
 		$(this).text("Меньше");
@@ -134,11 +134,23 @@ $(".btn-show-more").click(function () {
 	$(this).closest(".filter-item").find(".content-checkoxs").toggleClass("show-more");
 });
 
-//?archive-catalog page //more button filter result
+//? archive-catalog page //more button filter result
 if (window.innerWidth > 991) {
 	$(function () {
 		$('.filter-views .filter-views-content').each(function () {
-			let max = 10;
+			var w = screen.width;
+			if (w < '1200') {
+				var value = 5;
+			}
+			else {
+				if (w < '1600') {
+					var value = 7;
+				}
+				else {
+					var value = 10;
+				}
+			}
+			let max = value;
 			let items = $(this).find('.filter-view-item'),
 				len = items.length;
 			if (len > max) {
@@ -146,7 +158,6 @@ if (window.innerWidth > 991) {
 				items.wrapAll('<div class="hide"></div>');
 				$(this).append('<div class="btn-show-more">Больше</div>');
 			}
-
 		})
 	}).on('click', '.filter-views .filter-views-content .btn-show-more', function () {
 		$(this).closest('.filter-views .filter-views-content').toggleClass("show-more").find('.hide > .filter-view-item').unwrap();
@@ -154,7 +165,19 @@ if (window.innerWidth > 991) {
 			$(this).text("Меньше");
 		} else {
 			$(this).text("Больше");
-			let max = 10;
+			var w = screen.width;
+			if (w < '1200') {
+				var value = 5;
+			}
+			else {
+				if (w < '1600') {
+					var value = 7;
+				}
+				else {
+					var value = 10;
+				}
+			}
+			let max = value;
 			$('.filter-views .filter-views-content').each(function () {
 				let items = $(this).find('.filter-view-item'),
 					len = items.length;
@@ -166,11 +189,135 @@ if (window.innerWidth > 991) {
 		}
 	});
 }
-$(function () {
-	// $(".menu-right-dropdown").css('display', 'none');
-	// $(".btn-filter").click(function () {
-	// 	if ($('#archive-catalog-filter-full-tab').hasClass(".active")) {
-	// 		$(".menu-right-dropdown").css('display', 'none')
-	// 	}
-	// });
-});
+
+//? archive-catalog page //menu-right-dropdown, .catalog-category-slider hide
+setInterval(function () {
+	if ($('#archive-catalog-filter-full-tab').hasClass("active")) {
+		$(".menu-right-dropdown, .catalog-category-slider").hide();
+	}
+	else {
+		$(".menu-right-dropdown, .catalog-category-slider").show();
+	}
+}, 100);
+
+//? archive-catalog page //archive-catalog-filter-full //colors
+if (window.innerWidth <= 425) {
+	$(function () {
+		$('.archive-catalog-filter-full .filter-item--colors .colors-wrapper').each(function () {
+			let max = 8;
+			let items = $(this).find('.color-wrapper'),
+				len = items.length;
+			if (len > max) {
+				items = items.slice(max, len);
+				items.wrapAll('<div class="hide"></div>');
+				$(this).append('<div class="w-100"></div><div class="btn-show-more">Больше</div>');
+			}
+		})
+	}).on('click', '.archive-catalog-filter-full .filter-item--colors .colors-wrapper .btn-show-more', function () {
+		$(this).closest('.archive-catalog-filter-full .filter-item--colors .colors-wrapper').toggleClass("show-more").find('.hide > .color-wrapper').unwrap();
+		if ($(".archive-catalog-filter-full .filter-item--colors .colors-wrapper").hasClass("show-more")) {
+			$(this).text("Меньше");
+		} else {
+			$(this).text("Больше");
+			let max = 8;
+			$('.archive-catalog-filter-full .filter-item--colors .colors-wrapper').each(function () {
+				let items = $(this).find('.color-wrapper'),
+					len = items.length;
+				if (len > max) {
+					items = items.slice(max, len);
+					items.wrapAll('<div class="hide"></div>');
+				}
+			})
+		}
+	});
+}
+
+//? archive-catalog page //archive-catalog-filter-full //countries
+if (window.innerWidth < 768) {
+	$(function () {
+		$('.archive-catalog-filter-full .filter-item--countries').each(function () {
+			let max = 5;
+			let items = $(this).find('.custom-checkbox'),
+				len = items.length;
+			if (len > max) {
+				items = items.slice(max, len);
+				items.wrapAll('<div class="hide"></div>');
+				$(this).append('<div class="w-100"></div><div class="btn-show-more">Больше</div>');
+			}
+		})
+	}).on('click', '.archive-catalog-filter-full .filter-item--countries .btn-show-more', function () {
+		$(this).closest('.archive-catalog-filter-full .filter-item--countries').toggleClass("show-more").find('.hide > .custom-checkbox').unwrap();
+		if ($(".archive-catalog-filter-full .filter-item--countries").hasClass("show-more")) {
+			$(this).text("Меньше");
+		} else {
+			$(this).text("Больше");
+			let max = 5;
+			$('.archive-catalog-filter-full .filter-item--countries').each(function () {
+				let items = $(this).find('.custom-checkbox'),
+					len = items.length;
+				if (len > max) {
+					items = items.slice(max, len);
+					items.wrapAll('<div class="hide"></div>');
+				}
+			})
+		}
+	});
+}
+
+//? archive-catalog page //archive-catalog-filter-full //coat-material
+if (window.innerWidth < 768) {
+	$(function () {
+		$('.archive-catalog-filter-full .filter-item--coat-material').each(function () {
+			let max = 4;
+			let items = $(this).find('.custom-checkbox'),
+				len = items.length;
+			if (len > max) {
+				items = items.slice(max, len);
+				items.wrapAll('<div class="hide"></div>');
+				$(this).append('<div class="w-100"></div><div class="btn-show-more">Больше</div>');
+			}
+		})
+	}).on('click', '.archive-catalog-filter-full .filter-item--coat-material .btn-show-more', function () {
+		$(this).closest('.archive-catalog-filter-full .filter-item--coat-material').toggleClass("show-more").find('.hide > .custom-checkbox').unwrap();
+		if ($(".archive-catalog-filter-full .filter-item--coat-material").hasClass("show-more")) {
+			$(this).text("Меньше");
+		} else {
+			$(this).text("Больше");
+			let max = 4;
+			$('.archive-catalog-filter-full .filter-item--coat-material').each(function () {
+				let items = $(this).find('.custom-checkbox'),
+					len = items.length;
+				if (len > max) {
+					items = items.slice(max, len);
+					items.wrapAll('<div class="hide"></div>');
+				}
+			})
+		}
+	});
+}
+
+//? busket page //sticky sidebar
+if (window.innerWidth > 991) {
+	$(function () {
+		var top = $('#busket-total-info').offset().top - parseFloat($('#busket-total-info').css('marginTop').replace(/auto/, 0));
+		var footTop = $('.discount').offset().top - parseFloat($('.discount').css('marginTop').replace(/auto/, 0));
+
+		var maxY = footTop - $('#busket-total-info').outerHeight();
+
+		$(window).scroll(function (evt) {
+			var y = $(this).scrollTop();
+			if (y > top) {
+				if (y < maxY) {
+					$('#busket-total-info').addClass('fixed').removeAttr('style');
+				} else {
+					$('#busket-total-info').removeClass('fixed').css({
+						position: 'absolute',
+						top: (maxY - top) + 'px'
+					});
+				}
+			} else {
+				$('#busket-total-info').removeClass('fixed');
+			}
+		});
+	});
+}

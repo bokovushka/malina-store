@@ -30,6 +30,11 @@
 	}
 }
 
+@mixin xxxl-min {
+	@media (min-width: 1600px) {
+		@content;
+	}
+}
 @mixin xxl-min {
 	@media (min-width: 1400px) {
 		@content;

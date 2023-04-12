@@ -1,7 +1,7 @@
 <div class="archive-catalog-filter-full tab-pane fade" id="archive-catalog-filter-full" role="tabpanel" aria-labelledby="archive-catalog-filter-full-tab">
 	<div class="row">
 		<div class="col">
-			<div class="search-filter mb-6">
+			<div class="search-filter mb-10 mb-md-6 mt-n4 mt-md-0">
 				<form>
 					<div class="input-search">
 						<input name="search" type="search" placeholder="Введите артикул или название" autocomplete="off">
@@ -10,8 +10,29 @@
 			</div>
 		</div>
 	</div>
-	<div class="row mb-13">
-		<div class="col-3">
+	<div class="filter-item filter-item--price d-lg-none">
+		<div class="row">
+			<div class="col">
+				<div class="filter-title mb-4">
+					Цена
+				</div>
+				<div id="price-slider-full-m" class="price-slider-full-m slider-range mb-3">
+					<div class="currency-wrap">
+						<div class="input-currency">
+							<span class="currency">Грн</span>
+							<input class="currency-first-full-m" type="number" value="0" min="0" max="10000" step="1">
+						</div>
+						<div class="input-currency">
+							<input class="currency-last-full-m" type="number" value="10000" min="0" max="10000" step="1">
+						</div>
+					</div>
+					<div class="rangeBar-full"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row mb-lg-13">
+		<div class="col-12 col-lg-3 order-2 order-lg-1 mb-10 mb-lg-0">
 			<div class="filter-item filter-item--subject">
 				<div class="filter-title mb-4">
 					Тематика
@@ -88,7 +109,7 @@
 				</select>
 				<div class="subjects content-checkoxs show-more mt-3">
 					<div class="custom-control custom-checkbox position-relative">
-						<input type="checkbox" class="custom-control-input" id="t2">
+						<input type="checkbox" class="custom-control-input" id="t1">
 						<label class="custom-control-label" for="t1">Абстракция</label>
 					</div>
 					<div class="custom-control custom-checkbox position-relative">
@@ -345,31 +366,31 @@
 					</div>
 					<div class="custom-control custom-checkbox position-relative">
 						<input type="checkbox" class="custom-control-input" id="t65">
-						<label class="custom-control-label" for="dt65">Decor Maison</label>
+						<label class="custom-control-label" for="d-full-t65">Decor Maison</label>
 					</div>
 					<div class="custom-control custom-checkbox position-relative">
 						<input type="checkbox" class="custom-control-input" id="t66">
-						<label class="custom-control-label" for="dt66">Decor Maison</label>
+						<label class="custom-control-label" for="d-full-t66">Decor Maison</label>
 					</div>
 					<div class="custom-control custom-checkbox position-relative">
 						<input type="checkbox" class="custom-control-input" id="t67">
-						<label class="custom-control-label" for="dt67">Decor Maison</label>
+						<label class="custom-control-label" for="d-full-t67">Decor Maison</label>
 					</div>
 					<div class="custom-control custom-checkbox position-relative">
 						<input type="checkbox" class="custom-control-input" id="t68">
-						<label class="custom-control-label" for="dt68">Decor Maison</label>
+						<label class="custom-control-label" for="d-full-t68">Decor Maison</label>
 					</div>
 				</div>
 				<div class="btn-show-more">Больше</div>
 			</div>
 		</div>
-		<div class="col-6">
-			<div class="filter-item filter-item--price">
+		<div class="col-12 col-lg-6 order-3 order-lg-2">
+			<div class="filter-item filter-item--price d-none d-lg-block">
 				<div class="filter-title mb-4">
 					Цена
 				</div>
 				<div class="row">
-					<div class="col-10">
+					<div class="col col-xl-10">
 						<div class="position-relative">
 							<div id="price-slider-full" class="price-slider slider-range mb-6">
 								<div class="currency-wrap">
@@ -377,14 +398,14 @@
 										<div class="text mr-5">От</div>
 										<div class="input-currency">
 											<span class="currency">Грн</span>
-											<input class="currency-first" type="number" value="0" min="0" max="10000" step="1">
+											<input class="currency-first-full" type="number" value="0" min="0" max="10000" step="1">
 										</div>
 									</div>
 									<div class="currency-content d-flex align-items-center">
 										<div class="text mr-5">До</div>
 										<div class="input-currency">
 											<span class="currency">Грн</span>
-											<input class="currency-last" type="number" value="10000" min="0" max="10000" step="1">
+											<input class="currency-last-full" type="number" value="10000" min="0" max="10000" step="1">
 										</div>
 									</div>
 								</div>
@@ -399,126 +420,126 @@
 					Цвет
 				</div>
 				<div class="row">
-					<div class="col-10">
+					<div class="col col-xl-10">
 						<div class="d-flex flex-wrap colors-wrapper">
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color bg-red-color" data-toggle="tooltip" title="<span class='help'>Красный</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color bg-orange-color" data-toggle="tooltip" title="<span class='help'>Оранжевый</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color bg-yellow-color" data-toggle="tooltip" title="<span class='help'>Желтый</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color link-color-light bg-green-color" data-toggle="tooltip" title="<span class='help'>Зеленый</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color link-color-light bg-blue-light-color" data-toggle="tooltip" title="<span class='help'>Голубой</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color link-color-light bg-blue-color" data-toggle="tooltip" title="<span class='help'>Синий</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color bg-white-color before" data-toggle="tooltip" title="<span class='help'>Белый</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color link-color-light bg-black-color" data-toggle="tooltip" title="<span class='help'>Черный</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color link-color-light bg-silver-color" data-toggle="tooltip" title="<span class='help'>Серый</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color link-color-light bg-purple-color" data-toggle="tooltip" title="<span class='help'>Фиолетовый</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color bg-milk-color" data-toggle="tooltip" title="<span class='help'>Молочный</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color bg-pink-color" data-toggle="tooltip" title="<span class='help'>Розовый</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color link-color-light bg-gradient-color" data-toggle="tooltip" title="<span class='help'>Градиент</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color bg-pink-light-color" data-toggle="tooltip" title="<span class='help'>Светло-розовый</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color bg-sea-light-color" data-toggle="tooltip" title="<span class='help'>Березовый</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color link-color-light bg-black-light-color" data-toggle="tooltip" title="<span class='help'>Светло-черный</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color link-color-light bg-sea-color" data-toggle="tooltip" title="<span class='help'>Светло-синий</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color bg-light-color" data-toggle="tooltip" title="<span class='help'>Светло-серый</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color bg-white-light-color" data-toggle="tooltip" title="<span class='help'>Темно-белый</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color bg-orange-light-color" data-toggle="tooltip" title="<span class='help'>Светло-оранжевый</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color bg-red-color" data-toggle="tooltip" title="<span class='help'>Красный</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color bg-orange-color" data-toggle="tooltip" title="<span class='help'>Оранжевый</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color bg-yellow-color" data-toggle="tooltip" title="<span class='help'>Желтый</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color link-color-light bg-green-color" data-toggle="tooltip" title="<span class='help'>Зеленый</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color link-color-light bg-blue-light-color" data-toggle="tooltip" title="<span class='help'>Голубой</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color link-color-light bg-blue-color" data-toggle="tooltip" title="<span class='help'>Синий</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color bg-white-color before" data-toggle="tooltip" title="<span class='help'>Белый</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color link-color-light bg-black-color" data-toggle="tooltip" title="<span class='help'>Черный</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color link-color-light bg-silver-color" data-toggle="tooltip" title="<span class='help'>Серый</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color link-color-light bg-purple-color" data-toggle="tooltip" title="<span class='help'>Фиолетовый</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color bg-milk-color" data-toggle="tooltip" title="<span class='help'>Молочный</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color bg-pink-color" data-toggle="tooltip" title="<span class='help'>Розовый</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color link-color-light bg-gradient-color" data-toggle="tooltip" title="<span class='help'>Градиент</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color bg-pink-light-color" data-toggle="tooltip" title="<span class='help'>Светло-розовый</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color bg-sea-light-color" data-toggle="tooltip" title="<span class='help'>Березовый</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color link-color-light bg-black-light-color" data-toggle="tooltip" title="<span class='help'>Светло-черный</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color link-color-light bg-sea-color" data-toggle="tooltip" title="<span class='help'>Светло-синий</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color bg-light-color" data-toggle="tooltip" title="<span class='help'>Светло-серый</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color bg-white-light-color" data-toggle="tooltip" title="<span class='help'>Темно-белый</span>"><span class="before border-silver-custom"></span></div>
 							</div>
-							<div class="color-wrapper d-flex align-items-center justify-content-center">
+							<div class="color-wrapper d-flex align-items-center">
 								<div class="link-color bg-orange-light-color" data-toggle="tooltip" title="<span class='help'>Светло-оранжевый</span>"><span class="before border-silver-custom"></span></div>
 							</div>
 						</div>
@@ -530,7 +551,7 @@
 					Ширина
 				</div>
 				<div class="row">
-					<div class="col-6">
+					<div class="col-12 col-md-6">
 						<div class="custom-control custom-checkbox position-relative">
 							<input type="checkbox" class="custom-control-input" id="wallpaper-width1">
 							<label class="custom-control-label" for="wallpaper-width1">0,47 - 0,53 м.</label>
@@ -540,7 +561,7 @@
 							<label class="custom-control-label" for="wallpaper-width2">0,62 - 0,75 м.</label>
 						</div>
 					</div>
-					<div class="col-6">
+					<div class="col-12 col-md-6">
 						<div class="custom-control custom-checkbox position-relative">
 							<input type="checkbox" class="custom-control-input" id="wallpaper-width3">
 							<label class="custom-control-label" for="wallpaper-width3">0,8 - 1 м.</label>
@@ -557,13 +578,13 @@
 					Срок доставки
 				</div>
 				<div class="row">
-					<div class="col-6">
+					<div class="col-12 col-md-6">
 						<div class="custom-control custom-checkbox position-relative">
 							<input type="checkbox" class="custom-control-input" id="stock-filter">
 							<label class="custom-control-label" for="stock-filter">В наличии</label>
 						</div>
 					</div>
-					<div class="col-6">
+					<div class="col-12 col-md-6">
 						<div class="custom-control custom-checkbox position-relative">
 							<input type="checkbox" class="custom-control-input" id="sale-filter">
 							<label class="custom-control-label" for="sale-filter">Распродажа</label>
@@ -576,108 +597,108 @@
 					Обои по стране (страна производства)
 				</div>
 				<div class="row">
-					<div class="col-6">
+					<div class="col-12 col-md-6">
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="countries1">
-							<label class="custom-control-label" for="countries1"><img src="../img/flag/AU.svg" alt="country"> Австралия</label>
+							<input type="checkbox" class="custom-control-input" id="countries-full-1">
+							<label class="custom-control-label" for="c-full-ountries-full-1"><img src="../img/flag/AU.svg" alt="country"> Австралия</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="countries2">
-							<label class="custom-control-label" for="countries2"><img src="../img/flag/GB.svg" alt="country">Англия</label>
+							<input type="checkbox" class="custom-control-input" id="countries-full-2">
+							<label class="custom-control-label" for="c-full-ountries-full-2"><img src="../img/flag/GB.svg" alt="country">Англия</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="countries3">
-							<label class="custom-control-label" for="countries3"><img src="../img/flag/BE.svg" alt="country">Бельгия</label>
+							<input type="checkbox" class="custom-control-input" id="countries-full-3">
+							<label class="custom-control-label" for="c-full-ountries-full-3"><img src="../img/flag/BE.svg" alt="country">Бельгия</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="countries4">
-							<label class="custom-control-label" for="countries4"><img src="../img/flag/DE.svg" alt="country">Германия</label>
+							<input type="checkbox" class="custom-control-input" id="countries-full-4">
+							<label class="custom-control-label" for="c-full-ountries-full-4"><img src="../img/flag/DE.svg" alt="country">Германия</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="countries5">
-							<label class="custom-control-label" for="countries5"><img src="../img/flag/DK.svg" alt="country">Дания</label>
+							<input type="checkbox" class="custom-control-input" id="countries-full-5">
+							<label class="custom-control-label" for="c-full-ountries-full-5"><img src="../img/flag/DK.svg" alt="country">Дания</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="countries6">
-							<label class="custom-control-label" for="countries6"><img src="../img/flag/ES.svg" alt="country">Испания</label>
+							<input type="checkbox" class="custom-control-input" id="countries-full-6">
+							<label class="custom-control-label" for="c-full-ountries-full-6"><img src="../img/flag/ES.svg" alt="country">Испания</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="countries7">
-							<label class="custom-control-label" for="countries7"><img src="../img/flag/IT.svg" alt="country">Италия</label>
+							<input type="checkbox" class="custom-control-input" id="countries-full-7">
+							<label class="custom-control-label" for="c-full-ountries-full-7"><img src="../img/flag/IT.svg" alt="country">Италия</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="countries8">
-							<label class="custom-control-label" for="countries8"><img src="../img/flag/CA.svg" alt="country">Канада</label>
+							<input type="checkbox" class="custom-control-input" id="countries-full-8">
+							<label class="custom-control-label" for="c-full-ountries-full-8"><img src="../img/flag/CA.svg" alt="country">Канада</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="countries9">
-							<label class="custom-control-label" for="countries9"><img src="../img/flag/CN.svg" alt="country">Китай</label>
+							<input type="checkbox" class="custom-control-input" id="countries-full-9">
+							<label class="custom-control-label" for="c-full-ountries-full-9"><img src="../img/flag/CN.svg" alt="country">Китай</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="countries10">
-							<label class="custom-control-label" for="countries10"><img src="../img/flag/KR.svg" alt="country">Корея</label>
+							<input type="checkbox" class="custom-control-input" id="countries-full-10">
+							<label class="custom-control-label" for="c-full-ountries-full-10"><img src="../img/flag/KR.svg" alt="country">Корея</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="countries10">
-							<label class="custom-control-label" for="countries10"><img src="../img/flag/NL.svg" alt="country">Нидерланды</label>
+							<input type="checkbox" class="custom-control-input" id="countries-full-11">
+							<label class="custom-control-label" for="c-full-ountries-full-11"><img src="../img/flag/NL.svg" alt="country">Нидерланды</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="countries10">
-							<label class="custom-control-label" for="countries10"><img src="../img/flag/PL.svg" alt="country">Польша</label>
+							<input type="checkbox" class="custom-control-input" id="countries-full-12">
+							<label class="custom-control-label" for="c-full-ountries-full-12"><img src="../img/flag/PL.svg" alt="country">Польша</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="countries10">
-							<label class="custom-control-label" for="countries10"><img src="../img/flag/PT.svg" alt="country">Португалия</label>
+							<input type="checkbox" class="custom-control-input" id="countries-full-13">
+							<label class="custom-control-label" for="c-full-ountries-full-13"><img src="../img/flag/PT.svg" alt="country">Португалия</label>
 						</div>
 					</div>
-					<div class="col-6">
+					<div class="col-12 col-md-6">
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="countries10">
-							<label class="custom-control-label" for="countries10"><img src="../img/flag/RU.svg" alt="country">Россия</label>
+							<input type="checkbox" class="custom-control-input" id="countries-full-14">
+							<label class="custom-control-label" for="c-full-ountries-full-14"><img src="../img/flag/RU.svg" alt="country">Россия</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="countries10">
-							<label class="custom-control-label" for="countries10"><img src="../img/flag/RO.svg" alt="country">Румыния</label>
+							<input type="checkbox" class="custom-control-input" id="countries-full-15">
+							<label class="custom-control-label" for="c-full-ountries-full-15"><img src="../img/flag/RO.svg" alt="country">Румыния</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="countries10">
-							<label class="custom-control-label" for="countries10"><img src="../img/flag/US.svg" alt="country">США</label>
+							<input type="checkbox" class="custom-control-input" id="countries-full-16">
+							<label class="custom-control-label" for="c-full-ountries-full-16"><img src="../img/flag/US.svg" alt="country">США</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="countries10">
-							<label class="custom-control-label" for="countries10"><img src="../img/flag/TH.svg" alt="country">Тайланд</label>
+							<input type="checkbox" class="custom-control-input" id="countries-full-17">
+							<label class="custom-control-label" for="c-full-ountries-full-17"><img src="../img/flag/TH.svg" alt="country">Тайланд</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="countries10">
-							<label class="custom-control-label" for="countries10"><img src="../img/flag/TR.svg" alt="country">Турция</label>
+							<input type="checkbox" class="custom-control-input" id="countries-full-18">
+							<label class="custom-control-label" for="c-full-ountries-full-18"><img src="../img/flag/TR.svg" alt="country">Турция</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="countries10">
-							<label class="custom-control-label" for="countries10"><img src="../img/flag/FI.svg" alt="country">Финляндия</label>
+							<input type="checkbox" class="custom-control-input" id="countries-full-19">
+							<label class="custom-control-label" for="c-full-ountries-full-19"><img src="../img/flag/FI.svg" alt="country">Финляндия</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="countries10">
-							<label class="custom-control-label" for="countries10"><img src="../img/flag/FR.svg" alt="country">Франция</label>
+							<input type="checkbox" class="custom-control-input" id="countries-full-20">
+							<label class="custom-control-label" for="c-full-ountries-full-20"><img src="../img/flag/FR.svg" alt="country">Франция</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="countries10">
-							<label class="custom-control-label" for="countries10"><img src="../img/flag/CZ.svg" alt="country">Чехия</label>
+							<input type="checkbox" class="custom-control-input" id="countries-full-21">
+							<label class="custom-control-label" for="c-full-ountries-full-21"><img src="../img/flag/CZ.svg" alt="country">Чехия</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="countries10">
-							<label class="custom-control-label" for="countries10"><img src="../img/flag/CH.svg" alt="country">Швейцария</label>
+							<input type="checkbox" class="custom-control-input" id="countries-full-22">
+							<label class="custom-control-label" for="c-full-ountries-full-22"><img src="../img/flag/CH.svg" alt="country">Швейцария</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="countries10">
-							<label class="custom-control-label" for="countries10"><img src="../img/flag/SE.svg" alt="country">Швеция</label>
+							<input type="checkbox" class="custom-control-input" id="countries-full-23">
+							<label class="custom-control-label" for="c-full-ountries-full-23"><img src="../img/flag/SE.svg" alt="country">Швеция</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="countries10">
-							<label class="custom-control-label" for="countries10"><img src="../img/flag/ZA.svg" alt="country">ЮАР</label>
+							<input type="checkbox" class="custom-control-input" id="countries-full-24">
+							<label class="custom-control-label" for="c-full-ountries-full-24"><img src="../img/flag/ZA.svg" alt="country">ЮАР</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="countries10">
-							<label class="custom-control-label" for="countries10"><img src="../img/flag/JP.svg" alt="country">Япония</label>
+							<input type="checkbox" class="custom-control-input" id="countries-full-25">
+							<label class="custom-control-label" for="c-full-ountries-full-25"><img src="../img/flag/JP.svg" alt="country">Япония</label>
 						</div>
 					</div>
 				</div>
@@ -688,7 +709,7 @@
 				</div>
 				<div class="position-relative checkbox-preview-wrap">
 					<div class="row">
-						<div class="col-6">
+						<div class="col-12 col-md-6">
 							<div class="checkbox-preview">
 								<div class="custom-control custom-checkbox position-relative">
 									<input type="checkbox" class="custom-control-input" id="customType1">
@@ -708,7 +729,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-6">
+						<div class="col-12 col-md-6">
 							<div class="checkbox-preview">
 								<div class="custom-control custom-checkbox position-relative">
 									<input type="checkbox" class="custom-control-input" id="customType4">
@@ -731,7 +752,7 @@
 				</div>
 				<div class="position-relative checkbox-preview-wrap">
 					<div class="row">
-						<div class="col-6">
+						<div class="col-12 col-md-6">
 							<div class="checkbox-preview">
 								<div class="custom-control custom-checkbox position-relative">
 									<input type="checkbox" class="custom-control-input" id="customCoatMaterial1">
@@ -769,7 +790,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-6">
+						<div class="col-12 col-md-6">
 							<div class="checkbox-preview">
 								<div class="custom-control custom-checkbox position-relative">
 									<input type="checkbox" class="custom-control-input" id="customCoatMaterial7">
@@ -816,7 +837,7 @@
 				</div>
 				<div class="position-relative checkbox-preview-wrap">
 					<div class="row">
-						<div class="col-6">
+						<div class="col-12 col-md-6">
 							<div class="control-preview">
 								<div class="custom-control custom-radio">
 									<input type="radio" class="custom-control-input" id="texture1" name="filter-texture">
@@ -830,7 +851,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-6">
+						<div class="col-12 col-md-6">
 							<div class="control-preview">
 								<div class="custom-control custom-radio">
 									<input type="radio" class="custom-control-input" id="texture3" name="filter-texture">
@@ -842,7 +863,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-3">
+		<div class="col-12 col-lg-3 order-1 order-lg-3 mb-10 mb-lg-0">
 			<div class="filter-item filter-item--brands">
 				<div class="filter-title mb-4">
 					Бренды
@@ -926,273 +947,273 @@
 					<div class="brand mb-5">
 						<div class="brand-letter mb-4">А</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="aa1">
-							<label class="custom-control-label" for="aa1">A. S. Creation</label>
+							<input type="checkbox" class="custom-control-input" id="a-full-1">
+							<label class="custom-control-label" for="a-full-1">A. S. Creation</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="aa2">
-							<label class="custom-control-label" for="aa2">AdaWall</label>
+							<input type="checkbox" class="custom-control-input" id="a-full-2">
+							<label class="custom-control-label" for="a-full-2">AdaWall</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="aa3">
-							<label class="custom-control-label" for="aa3">Affresco</label>
+							<input type="checkbox" class="custom-control-input" id="a-full-3">
+							<label class="custom-control-label" for="a-full-3">Affresco</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="aa4">
-							<label class="custom-control-label" for="aa4">Agena</label>
+							<input type="checkbox" class="custom-control-input" id="a-full-4">
+							<label class="custom-control-label" for="a-full-4">Agena</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="aa5">
-							<label class="custom-control-label" for="aa5">Anaglypta</label>
+							<input type="checkbox" class="custom-control-input" id="a-full-5">
+							<label class="custom-control-label" for="a-full-5">Anaglypta</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="aa6">
-							<label class="custom-control-label" for="aa6">Andrew Martin</label>
+							<input type="checkbox" class="custom-control-input" id="a-full-6">
+							<label class="custom-control-label" for="a-full-6">Andrew Martin</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="aa7">
-							<label class="custom-control-label" for="aa7">Ango' Wall Papers</label>
+							<input type="checkbox" class="custom-control-input" id="a-full-7">
+							<label class="custom-control-label" for="a-full-7">Ango' Wall Papers</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="aa8">
-							<label class="custom-control-label" for="aa8">Anna French</label>
+							<input type="checkbox" class="custom-control-input" id="a-full-8">
+							<label class="custom-control-label" for="a-full-8">Anna French</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="aa9">
-							<label class="custom-control-label" for="aa9">Anna Muravina</label>
+							<input type="checkbox" class="custom-control-input" id="a-full-9">
+							<label class="custom-control-label" for="a-full-9">Anna Muravina</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="aa10">
-							<label class="custom-control-label" for="aa10">Applico</label>
+							<input type="checkbox" class="custom-control-input" id="a-full-10">
+							<label class="custom-control-label" for="a-full-10">Applico</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="aa11">
-							<label class="custom-control-label" for="aa11">Aquarelle</label>
+							<input type="checkbox" class="custom-control-input" id="a-full-11">
+							<label class="custom-control-label" for="a-full-11">Aquarelle</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="aa12">
-							<label class="custom-control-label" for="aa12">Architector</label>
+							<input type="checkbox" class="custom-control-input" id="a-full-12">
+							<label class="custom-control-label" for="a-full-12">Architector</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="aa13">
-							<label class="custom-control-label" for="aa13">Architects Paper</label>
+							<input type="checkbox" class="custom-control-input" id="a-full-13">
+							<label class="custom-control-label" for="a-full-13">Architects Paper</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="aa14">
-							<label class="custom-control-label" for="aa14">Arlin</label>
+							<input type="checkbox" class="custom-control-input" id="a-full-14">
+							<label class="custom-control-label" for="a-full-14">Arlin</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="aa15">
-							<label class="custom-control-label" for="aa15">Armani Casa</label>
+							<input type="checkbox" class="custom-control-input" id="a-full-15">
+							<label class="custom-control-label" for="a-full-15">Armani Casa</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="aa16">
-							<label class="custom-control-label" for="aa16">Arte</label>
+							<input type="checkbox" class="custom-control-input" id="a-full-16">
+							<label class="custom-control-label" for="a-full-16">Arte</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="aa17">
-							<label class="custom-control-label" for="aa17">Arthouse</label>
+							<input type="checkbox" class="custom-control-input" id="a-full-17">
+							<label class="custom-control-label" for="a-full-17">Arthouse</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="aa18">
-							<label class="custom-control-label" for="aa18">Artsky</label>
+							<input type="checkbox" class="custom-control-input" id="a-full-18">
+							<label class="custom-control-label" for="a-full-18">Artsky</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="aa19">
-							<label class="custom-control-label" for="aa19">Astere</label>
+							<input type="checkbox" class="custom-control-input" id="a-full-19">
+							<label class="custom-control-label" for="a-full-19">Astere</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="aa20">
-							<label class="custom-control-label" for="aa20">Atelier</label>
+							<input type="checkbox" class="custom-control-input" id="a-full-20">
+							<label class="custom-control-label" for="a-full-20">Atelier</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="aa21">
-							<label class="custom-control-label" for="aa21">Atlas Wallcoverings</label>
+							<input type="checkbox" class="custom-control-input" id="a-full-21">
+							<label class="custom-control-label" for="a-full-21">Atlas Wallcoverings</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="aa22">
-							<label class="custom-control-label" for="aa22">Aura</label>
+							<input type="checkbox" class="custom-control-input" id="a-full-22">
+							<label class="custom-control-label" for="a-full-22">Aura</label>
 						</div>
 					</div>
 					<div class="brand mb-5">
 						<div class="brand-letter mb-4">B</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="b1">
-							<label class="custom-control-label" for="b1">Baker Lifestyle</label>
+							<input type="checkbox" class="custom-control-input" id="b-full-1">
+							<label class="custom-control-label" for="b-full-1">Baker Lifestyle</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="b2">
-							<label class="custom-control-label" for="b2">Barneby Gates</label>
+							<input type="checkbox" class="custom-control-input" id="b-full-2">
+							<label class="custom-control-label" for="b-full-2">Barneby Gates</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="b3">
-							<label class="custom-control-label" for="b3">Barry Dixon</label>
+							<input type="checkbox" class="custom-control-input" id="b-full-3">
+							<label class="custom-control-label" for="b-full-3">Barry Dixon</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="b4">
-							<label class="custom-control-label" for="b4">Bart Halpern</label>
+							<input type="checkbox" class="custom-control-input" id="b-full-4">
+							<label class="custom-control-label" for="b-full-4">Bart Halpern</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="b5">
-							<label class="custom-control-label" for="b5">Bekaert</label>
+							<input type="checkbox" class="custom-control-input" id="b-full-5">
+							<label class="custom-control-label" for="b-full-5">Bekaert</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="b6">
-							<label class="custom-control-label" for="b6">Black Edition</label>
+							<input type="checkbox" class="custom-control-input" id="b-full-6">
+							<label class="custom-control-label" for="b-full-6">Black Edition</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="b7">
-							<label class="custom-control-label" for="b7">Blendworth</label>
+							<input type="checkbox" class="custom-control-input" id="b-full-7">
+							<label class="custom-control-label" for="b-full-7">Blendworth</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="b8">
-							<label class="custom-control-label" for="b8">BN International</label>
+							<input type="checkbox" class="custom-control-input" id="b-full-8">
+							<label class="custom-control-label" for="b-full-8">BN International</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="b9">
-							<label class="custom-control-label" for="b9">Borastapeter</label>
+							<input type="checkbox" class="custom-control-input" id="b-full-9">
+							<label class="custom-control-label" for="b-full-9">Borastapeter</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="b10">
-							<label class="custom-control-label" for="b10">Braquenie</label>
+							<input type="checkbox" class="custom-control-input" id="b-full-10">
+							<label class="custom-control-label" for="b-full-10">Braquenie</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="b11">
-							<label class="custom-control-label" for="b11">Brewster</label>
+							<input type="checkbox" class="custom-control-input" id="b-full-11">
+							<label class="custom-control-label" for="b-full-11">Brewster</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="b12">
-							<label class="custom-control-label" for="b12">Budur</label>
+							<input type="checkbox" class="custom-control-input" id="b-full-12">
+							<label class="custom-control-label" for="b-full-12">Budur</label>
 						</div>
 					</div>
 					<div class="brand mb-5">
 						<div class="brand-letter mb-4">C</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="c1">
-							<label class="custom-control-label" for="c1">Calcutta</label>
+							<input type="checkbox" class="custom-control-input" id="c-full-1">
+							<label class="custom-control-label" for="c-full-1">Calcutta</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="c2">
-							<label class="custom-control-label" for="c2">Calico</label>
+							<input type="checkbox" class="custom-control-input" id="c-full-2">
+							<label class="custom-control-label" for="c-full-2">Calico</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="c3">
-							<label class="custom-control-label" for="c3">Cannon/Bullock</label>
+							<input type="checkbox" class="custom-control-input" id="c-full-3">
+							<label class="custom-control-label" for="c-full-3">Cannon/Bullock</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="c4">
-							<label class="custom-control-label" for="c4">Carlisle & Co</label>
+							<input type="checkbox" class="custom-control-input" id="c-full-4">
+							<label class="custom-control-label" for="c-full-4">Carlisle & Co</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="c5">
-							<label class="custom-control-label" for="c5">Carl Robinson</label>
+							<input type="checkbox" class="custom-control-input" id="c-full-5">
+							<label class="custom-control-label" for="c-full-5">Carl Robinson</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="c6">
-							<label class="custom-control-label" for="c6">Casadeco</label>
+							<input type="checkbox" class="custom-control-input" id="c-full-6">
+							<label class="custom-control-label" for="c-full-6">Casadeco</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="c7">
-							<label class="custom-control-label" for="c7">Casamance</label>
+							<input type="checkbox" class="custom-control-input" id="c-full-7">
+							<label class="custom-control-label" for="c-full-7">Casamance</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="c8">
-							<label class="custom-control-label" for="c8">Caselio</label>
+							<input type="checkbox" class="custom-control-input" id="c-full-8">
+							<label class="custom-control-label" for="c-full-8">Caselio</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="c9">
-							<label class="custom-control-label" for="c9">Chelsea Decor</label>
+							<input type="checkbox" class="custom-control-input" id="c-full-9">
+							<label class="custom-control-label" for="c-full-9">Chelsea Decor</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="c10">
-							<label class="custom-control-label" for="c10">Chesapeake</label>
+							<input type="checkbox" class="custom-control-input" id="c-full-10">
+							<label class="custom-control-label" for="c-full-10">Chesapeake</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="c11">
-							<label class="custom-control-label" for="c11">Chivasso</label>
+							<input type="checkbox" class="custom-control-input" id="c-full-11">
+							<label class="custom-control-label" for="c-full-11">Chivasso</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="c12">
-							<label class="custom-control-label" for="c12">Christian Fischbacher</label>
+							<input type="checkbox" class="custom-control-input" id="c-full-12">
+							<label class="custom-control-label" for="c-full-12">Christian Fischbacher</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="c13">
-							<label class="custom-control-label" for="c13">Christian Lacroix</label>
+							<input type="checkbox" class="custom-control-input" id="c-full-13">
+							<label class="custom-control-label" for="c-full-13">Christian Lacroix</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="c14">
-							<label class="custom-control-label" for="c14">Clarke & Clarke</label>
+							<input type="checkbox" class="custom-control-input" id="c-full-14">
+							<label class="custom-control-label" for="c-full-14">Clarke & Clarke</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="c15">
-							<label class="custom-control-label" for="c15">Cole & Son</label>
+							<input type="checkbox" class="custom-control-input" id="c-full-15">
+							<label class="custom-control-label" for="c-full-15">Cole & Son</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="c16">
-							<label class="custom-control-label" for="c16">Colefax and Fowler</label>
+							<input type="checkbox" class="custom-control-input" id="c-full-16">
+							<label class="custom-control-label" for="c-full-16">Colefax and Fowler</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="c17">
-							<label class="custom-control-label" for="c17">Collection For Walls</label>
+							<input type="checkbox" class="custom-control-input" id="c-full-17">
+							<label class="custom-control-label" for="c-full-17">Collection For Walls</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="c18">
-							<label class="custom-control-label" for="c18">Collins & Company</label>
+							<input type="checkbox" class="custom-control-input" id="c-full-18">
+							<label class="custom-control-label" for="c-full-18">Collins & Company</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="c19">
-							<label class="custom-control-label" for="c19">Coordonne</label>
+							<input type="checkbox" class="custom-control-input" id="c-full-19">
+							<label class="custom-control-label" for="c-full-19">Coordonne</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="c20">
-							<label class="custom-control-label" for="c20">Cosca</label>
+							<input type="checkbox" class="custom-control-input" id="c-full-20">
+							<label class="custom-control-label" for="c-full-20">Cosca</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="c21">
-							<label class="custom-control-label" for="c21">Covers</label>
+							<input type="checkbox" class="custom-control-input" id="c-full-21">
+							<label class="custom-control-label" for="c-full-21">Covers</label>
 						</div>
 					</div>
 					<div class="brand mb-5">
 						<div class="brand-letter mb-4">D</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="d1">
-							<label class="custom-control-label" for="d1">Decoprint</label>
+							<input type="checkbox" class="custom-control-input" id="d-full-1">
+							<label class="custom-control-label" for="d-full-1">Decoprint</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="d2">
-							<label class="custom-control-label" for="d2">Decor Maison</label>
+							<input type="checkbox" class="custom-control-input" id="d-full-2">
+							<label class="custom-control-label" for="d-full-2">Decor Maison</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="d3">
-							<label class="custom-control-label" for="d3">Dedar</label>
+							<input type="checkbox" class="custom-control-input" id="d-full-3">
+							<label class="custom-control-label" for="d-full-3">Dedar</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="d4">
-							<label class="custom-control-label" for="d4">De Gournay</label>
+							<input type="checkbox" class="custom-control-input" id="d-full-4">
+							<label class="custom-control-label" for="d-full-4">De Gournay</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="d5">
-							<label class="custom-control-label" for="d5">Decoprint</label>
+							<input type="checkbox" class="custom-control-input" id="d-full-5">
+							<label class="custom-control-label" for="d-full-5">Decoprint</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="d6">
-							<label class="custom-control-label" for="d6">Decor Maison</label>
+							<input type="checkbox" class="custom-control-input" id="d-full-6">
+							<label class="custom-control-label" for="d-full-6">Decor Maison</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="d7">
-							<label class="custom-control-label" for="d7">Dedar</label>
+							<input type="checkbox" class="custom-control-input" id="d-full-7">
+							<label class="custom-control-label" for="d-full-7">Dedar</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="d8">
-							<label class="custom-control-label" for="d8">De Gournay</label>
+							<input type="checkbox" class="custom-control-input" id="d-full-8">
+							<label class="custom-control-label" for="d-full-8">De Gournay</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="d9">
-							<label class="custom-control-label" for="d9">Decoprint</label>
+							<input type="checkbox" class="custom-control-input" id="d-full-9">
+							<label class="custom-control-label" for="d-full-9">Decoprint</label>
 						</div>
 						<div class="custom-control custom-checkbox position-relative">
-							<input type="checkbox" class="custom-control-input" id="d10">
-							<label class="custom-control-label" for="d10">Decor Maison</label>
+							<input type="checkbox" class="custom-control-input" id="d-full-10">
+							<label class="custom-control-label" for="d-full-10">Decor Maison</label>
 						</div>
 					</div>
 				</div>
@@ -1351,8 +1372,8 @@
 		</div>
 		<div class="w-100"></div>
 		<div class="col">
-			<div class="full-result-buttons d-flex align-items-center">
-				<button type="button" class="btn btn-show-result btn-dark mr-2">Показать</button>
+			<div class="full-result-buttons d-flex flex-column flex-md-row align-items-center">
+				<button type="button" class="btn btn-show-result btn-dark mr-md-2 mb-2 mb-md-0">Показать</button>
 				<button type="button" class="btn btn-clear-result btn-outline-black">Сбросить </button>
 			</div>
 		</div>

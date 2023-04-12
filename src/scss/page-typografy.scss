@@ -174,13 +174,23 @@ a {
 				line-height: 20px;
 				@include transition(0.3s ease-out 0s);
 			}
-			svg {
-				width: 40px;
-				height: 40px;
-				fill: $white;
-				stroke-width: 2px;
-				stroke: $black-custom;
-				@include transition(0.3s ease-out 0s);
+			.i-heart {
+				svg {
+					width: 30px;
+					height: 30px;
+					fill: $white;
+					stroke-width: 2px;
+					stroke: $black-custom;
+					@include transition(0.3s ease-out 0s);
+				}
+			}
+			.i-item-delete {
+				svg {
+					width: 16px;
+					height: 16px;
+					fill: #8c8c8c;
+					@include transition(0.3s ease-out 0s);
+				}
 			}
 		}
 		&:hover {
@@ -189,9 +199,17 @@ a {
 				color: $red-custom;
 				@include transition(0.3s ease-out 0s);
 			}
-			svg {
-				stroke: $red-custom;
-				@include transition(0.3s ease-out 0s);
+			.i-heart {
+				svg {
+					stroke: $red-custom;
+					@include transition(0.3s ease-out 0s);
+				}
+			}
+			.i-item-delete {
+				svg {
+					fill: $red-custom;
+					@include transition(0.3s ease-out 0s);
+				}
 			}
 		}
 	}
@@ -867,42 +885,6 @@ ul.list-inline-categories {
 		}
 	}
 }
-.table {
-	overflow: auto;
-	@media (max-width: 350px) {
-		display: block;
-		overflow: auto;
-	}
-	thead {
-		tr {
-			border-bottom: 1px solid $black;
-			th {
-				font-weight: 400;
-				font-size: 16px;
-				line-height: 24px;
-				color: $black;
-				padding: 13px;
-				vertical-align: middle;
-			}
-		}
-	}
-	tbody {
-		tr {
-			td,
-			th {
-				padding: 37px 13px;
-				vertical-align: middle;
-				font-size: 16px;
-				line-height: 26px;
-				@include sm-max {
-					font-weight: 300;
-					font-size: 12px;
-					line-height: 14px;
-				}
-			}
-		}
-	}
-}
 .breadcrumb {
 	font-family: "GaugePro";
 	background: transparent;
@@ -1527,7 +1509,6 @@ ul.list-inline-categories {
 						display: block;
 						font-size: 18px;
 						line-height: 27px;
-						font-weight: 700;
 						margin-bottom: 20px;
 						&--small {
 							font-size: 11px;
@@ -2530,5 +2511,18 @@ ul.list-inline-categories {
 				border-color: $black-custom;
 			}
 		}
+	}
+}
+.btn-free-shiping {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 18px;
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 14px;
+	width: 100%;
+	img {
+		width: 64px;
 	}
 }
