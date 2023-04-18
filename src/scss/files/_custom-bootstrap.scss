@@ -247,6 +247,12 @@ $spacers: map-merge(
 		24: (
 			$spacer * 12,
 		),
+		25: (
+			$spacer * 12.5,
+		),
+		26: (
+			$spacer * 13,
+		),
 	),
 	$spacers
 );

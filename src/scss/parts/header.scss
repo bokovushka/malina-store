@@ -46,6 +46,9 @@
 			&-hide {
 				@include transition(0.3s ease-out 0s);
 				top: -200px;
+				.header-main-mobile .header-main-others li.list-inline-item.basket-list.active .sub-menu {
+					top: 190px;
+				}
 			}
 		}
 		&-logo {
@@ -316,7 +319,7 @@
 						box-shadow: 4px 8px 24px -4px rgba(0, 0, 0, 0.2);
 						width: 320px;
 						position: absolute;
-						top: 50px;
+						top: 60px;
 						left: 50%;
 						transform: translatex(-50%);
 						opacity: 0;
@@ -463,8 +466,7 @@
 					visibility: hidden;
 					@include transition(0.3s ease-out 0s);
 				}
-				&.active,
-				&:hover {
+				&.active {
 					.sub-menu {
 						opacity: 1;
 						visibility: visible;
@@ -474,6 +476,21 @@
 						&:after {
 							transform: scaleY(-1);
 							@include transition(0.3s ease-out 0s);
+						}
+					}
+				}
+				&:hover {
+					@include lg-min {
+						.sub-menu {
+							opacity: 1;
+							visibility: visible;
+							@include transition(0.3s ease-out 0s);
+						}
+						span {
+							&:after {
+								transform: scaleY(-1);
+								@include transition(0.3s ease-out 0s);
+							}
 						}
 					}
 				}

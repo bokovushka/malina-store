@@ -171,7 +171,7 @@
 			background: $silver-light-custom;
 			border: none;
 			left: -32px;
-			top: 1px;
+			top: 3px;
 		}
 	}
 	.custom-control-input {
@@ -183,7 +183,7 @@
 				width: 8px;
 				height: 8px;
 				left: -26px;
-				top: 7px;
+				top: 9px;
 			}
 			&::before {
 				background: $black-custom;
@@ -194,167 +194,6 @@
 		}
 		&:not(:disabled):active ~ .custom-control-label::before {
 			background: $silver-light-custom;
-		}
-	}
-}
-//range
-.slider-range {
-	display: flex;
-	flex-direction: column-reverse;
-	.input-currency {
-		display: flex;
-		border: 1px solid #e4e4eb;
-		height: 48px;
-		input {
-			all: unset;
-			width: 100%;
-			padding: 4px 16px;
-		}
-	}
-	.currency {
-		font-size: 12px;
-		line-height: 22px;
-		padding: 14px;
-		background: rgba(228, 228, 235, 0.3);
-		border-right: 1px solid $silver-light-custom;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-	.rangeSlider {
-		background: transparent;
-		margin: 35px 10px;
-		border-radius: 0;
-		z-index: 2;
-		&.range {
-			.rangeNub {
-				border-radius: 0;
-				transform: unset !important;
-				background: $black-custom;
-			}
-		}
-		.rangeHandle {
-			width: 18px;
-			height: 18px;
-			cursor: grab;
-			&::before {
-				box-shadow: 0 0 0 0px $black-custom;
-				border-radius: 0;
-			}
-			&.active {
-				.rangeNub {
-					background: $black-custom;
-				}
-			}
-		}
-		.rangeBar {
-			background: #e4e4eb;
-		}
-		&.focus {
-			.rangeBar {
-				background: $black-custom;
-			}
-			.rangeFloat {
-				background: rgba(228, 228, 235, 0.3);
-				color: $black-custom;
-			}
-		}
-		&.hoverable:not(.disabled) {
-			.rangeHandle:hover:before {
-				box-shadow: 0 0 0 8px $silver-light-custom;
-				border-radius: 0;
-				opacity: 1;
-			}
-			.rangeHandle.press:before,
-			.rangeHandle.press:hover:before {
-				box-shadow: 0 0 0 12px $silver-light-custom;
-				opacity: 0.9;
-			}
-		}
-	}
-	.rangeBar-full {
-		height: 0.5em;
-		width: calc(100% - 40px);
-		background: rgb(228 228 235 / 0.5);
-		position: absolute;
-		top: 35px;
-		z-index: 1;
-	}
-	&.price-slider-full-m {
-		.currency-wrap {
-			gap: 0 !important;
-		}
-	}
-}
-//select search
-.filter-item--brands,
-.filter-item--subject {
-	.fstElement {
-		width: 100%;
-		border: none;
-		&:hover {
-			.fstControls {
-				box-shadow: 0 0 0 10px $silver-light-custom;
-				background: $white;
-			}
-		}
-		&.fstActive,
-		&.fstResultsOpened {
-			background: $silver-light-custom;
-			.fstControls {
-				border: 1px solid $black-custom;
-				background: $white;
-				box-shadow: 0 0 0 10px $silver-light-custom;
-			}
-			.fstResults {
-				top: calc(100% + 15px);
-				max-height: 15em;
-				.fstGroup {
-					padding-top: 0;
-				}
-			}
-			.fstResultItem,
-			.fstGroupTitle,
-			.fstNoResults {
-				padding: 11px 24px;
-				font-size: 17px;
-				line-height: 24px;
-			}
-			.fstSelected,
-			.fstFocused {
-				background: $silver-light-custom;
-				border-color: $silver-light-custom;
-				color: $red-light-custom;
-			}
-		}
-		.fstControls {
-			width: 100%;
-			display: flex;
-			align-items: center;
-			border: 1px solid rgba(228, 228, 235, 0.3);
-			background: rgba(228, 228, 235, 0.3);
-			&::before {
-				content: "";
-				display: block;
-				position: relative;
-				width: 32px;
-				height: 32px;
-				background: url(../img/icons/icons.svg#i-search) no-repeat center;
-				opacity: 0.3;
-				margin-right: 12px;
-				margin-bottom: 6px;
-			}
-			.fstQueryInput {
-				font-size: 17px;
-				line-height: 24px;
-				width: 100% !important;
-				&::placeholder {
-					opacity: 0.6;
-				}
-			}
-			.fstChoiceItem {
-				display: none;
-			}
 		}
 	}
 }

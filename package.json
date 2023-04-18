@@ -24,6 +24,7 @@
 		"chosen-js": "^1.8.7",
 		"del": "latest",
 		"fastselect": "latest",
+		"flatpickr": "^4.6.13",
 		"gulp": "latest",
 		"gulp-autoprefixer": "latest",
 		"gulp-clean-css": "latest",

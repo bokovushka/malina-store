@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Calculator"
+})
+
+<body>
+	<div id="wrapper" class="wrapper">
+		@@include('html/header.html',{})
+		<main class="main">
+			<div class="content">
+				<div class="entry-content">
+					<div id="b-breadcrumbs" class="b-breadcrumbs">
+						<div class="container">
+							<div class="row">
+								<div class="col mt-4 mt-md-0 mb-4">
+									<nav aria-label="breadcrumb">
+										<ol class="breadcrumb mb-0">
+											<li class="breadcrumb-item"><a href="##">Malina Design Studio</a></li>
+											<li class="breadcrumb-item active" aria-current="page">Онлайн калькулятор обоев</li>
+										</ol>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="container">
+						<div class="calculator mt-4 mt-lg-11 mb-10 mb-lg-16">
+							<div class=" head-wrap row flex-column-reverse flex-lg-row align-items-center mb-3">
+								<div class="col-12 col-lg-6">
+									<div class="head">Онлайн калькулятор обоев</div>
+								</div>
+								<div class="col-12 col-lg-6 text-right mb-10 mb-lg-0">
+									<a href="##" class="btn p-0 btn-ahead-page">Каталог обоев</a>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col col-lg-6">
+									<div class="subhead mb-5">Калькулятор обоев поможет рассчитать, сколько рулонов потребуется на каждую комнату. Сервис производит расчет с учетом количества окон и дверей.</div>
+								</div>
+							</div>
+							<div class="row calculator-maain" id="calculator-main">
+								<div class="calculator-left-content col-12 col-lg-6 mb-10 mb-lg-0">
+									<div class="calculator-order-data" id="calculator-order-data">
+										<div class="calculator-item calculator-item-roll mb-10 mb-lg-16">
+											<div class="row align-items-center pb-2">
+												<div class="col-12 col-xxxl-6 d-flex align-items-center mb-4 mb-xxxl-0">
+													<div class="calculator-item-number d-flex align-items-center justify-content-center mr-3">1</div>
+													<div class="h4 calculator-item-title">Параметры рулона
+														<div class="i-info d-block d-xxxl-none" data-toggle="tooltip" title="<span class='help'>Параметры рулона заполнятся автоматически при вводе артикула рулона</span>">
+															<span class="icon-i-info"><span class="path1"></span><span class="path2"></span></span>
+														</div>
+													</div>
+												</div>
+												<div class="col-12 col-xxxl-6 d-flex align-items-center">
+													<div class="i-info mr-5 d-none d-xxxl-block" data-toggle="tooltip" title="<span class='help'>Параметры рулона заполнятся автоматически при вводе артикула рулона</span>">
+														<span class="icon-i-info"><span class="path1"></span><span class="path2"></span></span>
+													</div>
+													<div class="filter-item--vendor-code">
+														<select class="select-vendor-code" multiple name="select-vendor-code">
+															<option value="vc1">12345</option>
+															<option value="vc2">54321</option>
+															<option value="vc3">12345</option>
+															<option value="vc4">54321</option>
+															<option value="vc5">12345</option>
+															<option value="vc6">54321</option>
+															<option value="vc7">12345</option>
+															<option value="vc8">54321</option>
+															<option value="vc9">12345</option>
+															<option value="vc0">54321</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<hr>
+											<div class="calculator-item-content px-lg-3">
+												<div class="row empty-content">
+													<div class="col">
+														<div class="px-4 py-13">
+															<div class="h4 mb-2 text-center">Ничего не выбрано</div>
+															<a href="##" class="btn-ahead mx-auto">
+																<span class="mr-2">Перейти в каталог</span>
+																<svg>
+																	<use xlink:href="img/icons/icons.svg#i-arrow"></use>
+																</svg>
+															</a>
+														</div>
+													</div>
+												</div>
+												<div class="row filled-content">
+													<div class="col">
+														<div class="wish-list-vendor-code d-flex flex-row-reverse align-items-center mt-4 mb-5">
+															<a class="btn collapsed d-flex flex-row-reverse align-items-center p-0" data-toggle="collapse" href="#collapse-wish-list-vendor-code" aria-expanded="false" aria-controls="collapse-wish-list-vendor-code">Выбрать из избранного</a>
+														</div>
+														<div class="collapse collapse-wish-list-vendor-code mb-4" id="collapse-wish-list-vendor-code">
+															<div class="table-product-wrap d-flex flex-wrap align-items-center">
+																<div class="table-product d-flex align-items-center">
+																	<div class="table-product-image mr-2">
+																		<img src="img/wallpaper/wallpaper-1.jpeg" alt="img">
+																	</div>
+																	<div class="table-product-code">
+																		908233
+																	</div>
+																</div>
+																<div class="table-product d-flex align-items-center">
+																	<div class="table-product-image mr-2">
+																		<img src="img/wallpaper/wallpaper-2.jpeg" alt="img">
+																	</div>
+																	<div class="table-product-code">
+																		291093
+																	</div>
+																</div>
+																<div class="table-product d-flex align-items-center">
+																	<div class="table-product-image mr-2">
+																		<img src="img/wallpaper/wallpaper-3.jpeg" alt="img">
+																	</div>
+																	<div class="table-product-code">
+																		35267
+																	</div>
+																</div>
+																<div class="table-product d-flex align-items-center">
+																	<div class="table-product-image mr-2">
+																		<img src="img/wallpaper/wallpaper-4.jpeg" alt="img">
+																	</div>
+																	<div class="table-product-code">
+																		35267
+																	</div>
+																</div>
+																<div class="table-product d-flex align-items-center">
+																	<div class="table-product-image mr-2">
+																		<img src="img/wallpaper/wallpaper-1.jpeg" alt="img">
+																	</div>
+																	<div class="table-product-code">
+																		908233
+																	</div>
+																</div>
+																<div class="table-product d-flex align-items-center">
+																	<div class="table-product-image mr-2">
+																		<img src="img/wallpaper/wallpaper-2.jpeg" alt="img">
+																	</div>
+																	<div class="table-product-code">
+																		291093
+																	</div>
+																</div>
+																<div class="table-product d-flex align-items-center">
+																	<div class="table-product-image mr-2">
+																		<img src="img/wallpaper/wallpaper-3.jpeg" alt="img">
+																	</div>
+																	<div class="table-product-code">
+																		35267
+																	</div>
+																</div>
+																<div class="table-product d-flex align-items-center">
+																	<div class="table-product-image mr-2">
+																		<img src="img/wallpaper/wallpaper-4.jpeg" alt="img">
+																	</div>
+																	<div class="table-product-code">
+																		35267
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="w-100"></div>
+													<div class="col-12 col-xxl-6 mb-4 mx-xxl-0 calculator-item-filter">
+														<div class="calculator-filter-title mb-3">Ширина рулона (м)</div>
+														<div class="filter-item--wallpaper-width">
+															<select class="select-wallpaper-width" name="select-wallpaper-width">
+																<option value="w1">0,47</option>
+																<option value="w2">0,53</option>
+																<option value="w3">0,62</option>
+																<option value="w4">0,75</option>
+																<option value="w5">0,8</option>
+																<option value="w6">1</option>
+																<option value="w7">1,37</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-12 col-xxl-6 calculator-item-filter">
+														<div class="calculator-filter-title mb-3">Длина рулона (м)</div>
+														<div class="field">
+															<input type="text" class="form-control" id="roll-length" name="roll-length" placeholder="Введите длину рулона">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="calculator-item calculator-item-room mb-10 mb-lg-16">
+											<div class="row align-items-center pb-2">
+												<div class="col d-flex align-items-center">
+													<div class="calculator-item-number d-flex align-items-center justify-content-center mr-3">2</div>
+													<div class="h4 calculator-item-title">Параметры комнаты
+														<div class="i-info d-block d-xxl-none" data-toggle="tooltip" title="<span class='help'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo labore, possimus nihil consectetur optio, ipsum dolor repellat soluta distinctio, architecto eveniet voluptatum laborum quidem ea odio? Quam soluta quisquam sed.</span>">
+															<span class="icon-i-info"><span class="path1"></span><span class="path2"></span></span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<hr class="pb-2">
+											<div class="calculator-item-content px-lg-3">
+												<div class="row">
+													<div class="col">
+														<div class="row align-items-center">
+															<div class="col-12 col-xxl-4 mb-4">
+																<div class="calculator-filter-title">1.Высота стен
+																	<div class="i-info d-md-none" data-toggle="tooltip" title="<span class='help'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo labore, possimus nihil consectetur optio, ipsum dolor repellat soluta distinctio, architecto eveniet voluptatum laborum quidem ea odio? Quam soluta quisquam sed.</span>">
+																		<span class="icon-i-info"><span class="path1"></span><span class="path2"></span></span>
+																	</div>
+																</div>
+															</div>
+															<div class="col-12 col-xxl-8 mb-4 calculator-item-filter calculator-item-filter-cm">
+																<div class="d-flex flex-row-reverse flex-xxl-row align-items-center ml-xxl-7">
+																	<div class="i-info ml-5 ml-xxl-0 mr-xxl-5 d-none d-md-block" data-toggle="tooltip" title="<span class='help'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo labore, possimus nihil consectetur optio, ipsum dolor repellat soluta distinctio, architecto eveniet voluptatum laborum quidem ea odio? Quam soluta quisquam sed.</span>">
+																		<span class="icon-i-info"><span class="path1"></span><span class="path2"></span></span>
+																	</div>
+																	<div class="field w-100">
+																		<input type="text" class="form-control" id="wall-height" name="wall-height">
+																	</div>
+																</div>
+															</div>
+															<div class="w-100"></div>
+															<div class="col-12 col-xxl-4 mb-4">
+																<div class="calculator-filter-title">2.Ширина стен
+																	<div class="i-info d-md-none" data-toggle="tooltip" title="<span class='help'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo labore, possimus nihil consectetur optio, ipsum dolor repellat soluta distinctio, architecto eveniet voluptatum laborum quidem ea odio? Quam soluta quisquam sed.</span>">
+																		<span class="icon-i-info"><span class="path1"></span><span class="path2"></span></span>
+																	</div>
+																</div>
+															</div>
+															<div class="col-12 col-xxl-8 mb-4 calculator-item-filter calculator-item-filter-cm">
+																<div class="d-flex flex-row-reverse flex-xxl-row align-items-center ml-xxl-7">
+																	<div class="i-info ml-5 ml-xxl-0 mr-xxl-5 d-none d-md-block" data-toggle="tooltip" title="<span class='help'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo labore, possimus nihil consectetur optio, ipsum dolor repellat soluta distinctio, architecto eveniet voluptatum laborum quidem ea odio? Quam soluta quisquam sed.</span>">
+																		<span class="icon-i-info"><span class="path1"></span><span class="path2"></span></span>
+																	</div>
+																	<div class="field w-100">
+																		<input type="text" class="form-control" id="wall-width" name="wall-width">
+																	</div>
+																</div>
+															</div>
+															<div class="w-100"></div>
+															<div class="col">
+																<button type="button" class="btn btn-add p-0 mx-auto mt-2 mb-4">
+																	<div class="i-plus mr-md-2">
+																		<svg>
+																			<use xlink:href="@img/icons/icons.svg#i-plus"></use>
+																		</svg>
+																	</div>
+																	<span>Добавить еще стену</span>
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="calculator-item calculator-item-window mb-10 mb-lg-16">
+											<div class="row align-items-center pb-2">
+												<div class="col col-xxxl-8 d-flex align-items-center">
+													<div class="calculator-item-number d-flex align-items-center justify-content-center mr-3">3</div>
+													<div class="h4 calculator-item-title">Параметры окон
+														<div class="i-info d-block d-xxxl-none" data-toggle="tooltip" title="<span class='help'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo labore, possimus nihil consectetur optio, ipsum dolor repellat soluta distinctio, architecto eveniet voluptatum laborum quidem ea odio? Quam soluta quisquam sed.</span>">
+															<span class="icon-i-info"><span class="path1"></span><span class="path2"></span></span>
+														</div>
+													</div>
+												</div>
+												<div class="col-4 d-none d-xxxl-block">
+													<div class="i-info ml-auto mr-3" data-toggle="tooltip" title="<span class='help'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo labore, possimus nihil consectetur optio, ipsum dolor repellat soluta distinctio, architecto eveniet voluptatum laborum quidem ea odio? Quam soluta quisquam sed.</span>">
+														<span class="icon-i-info"><span class="path1"></span><span class="path2"></span></span>
+													</div>
+												</div>
+											</div>
+											<hr class="pb-4 pt-2">
+											<div class="calculator-item-content px-lg-3">
+												<div class="row">
+													<div class="col">
+														<div class="row align-items-center">
+															<div class="col">
+																<div class="row">
+																	<div class="col-12 col-md-4 col-lg-6 col-xxl-4 mb-5 mb-md-0">
+																		<div class="d-flex align-items-end justify-content-between justify-content-md-start h-100">
+																			<div class="i-window pt-11 pb-3 py-md-3 px-7 p-lg-3 mr-2">
+																				<div class="window-info-number">1</div>
+																				<hr>
+																			</div>
+																			<a href="##" class="link-delete-window link-wish-list mb--3">
+																				<span class="wrapper-wish-list">
+																					<div class="i-item-delete">
+																						<svg>
+																							<use xlink:href="img/icons/icons.svg#i-item-delete"></use>
+																						</svg>
+																					</div>
+																					<span class="ml-2">Удалить</span>
+																				</span>
+																			</a>
+																		</div>
+																	</div>
+																	<div class="col-12 col-md-8 col-lg-6 col-xxl-8 calculator-item-filter calculator-item-filter-cm">
+																		<div class="row">
+																			<div class="col-12 col-xxl-6 mb-4 mb-xxl-0">
+																				<div class="calculator-filter-title mb-3">Высота окна</div>
+																				<div class="field w-100">
+																					<input type="text" class="form-control" id="wall-width" name="wall-width">
+																				</div>
+																			</div>
+																			<div class="col-12 col-xxl-6">
+																				<div class="calculator-filter-title mb-3"> Ширина окна</div>
+																				<div class="field w-100">
+																					<input type="text" class="form-control" id="wall-width" name="wall-width">
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="w-100"></div>
+															<div class="col">
+																<button type="button" class="btn btn-add p-0 mx-auto mt-7 mb-4">
+																	<div class="i-plus mr-md-2">
+																		<svg>
+																			<use xlink:href="@img/icons/icons.svg#i-plus"></use>
+																		</svg>
+																	</div>
+																	<span>Добавить еще окно</span>
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="calculator-item calculator-item-door">
+											<div class="row align-items-center pb-2">
+												<div class="col col-xxxl-8 d-flex align-items-center">
+													<div class="calculator-item-number d-flex align-items-center justify-content-center mr-3">4</div>
+													<div class="h4 calculator-item-title">Параметры дверей
+														<div class="i-info d-block d-xxxl-none" data-toggle="tooltip" title="<span class='help'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo labore, possimus nihil consectetur optio, ipsum dolor repellat soluta distinctio, architecto eveniet voluptatum laborum quidem ea odio? Quam soluta quisquam sed.</span>">
+															<span class="icon-i-info"><span class="path1"></span><span class="path2"></span></span>
+														</div>
+													</div>
+												</div>
+												<div class="col-4 d-none d-xxxl-block">
+													<div class="i-info ml-auto mr-3" data-toggle="tooltip" title="<span class='help'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo labore, possimus nihil consectetur optio, ipsum dolor repellat soluta distinctio, architecto eveniet voluptatum laborum quidem ea odio? Quam soluta quisquam sed.</span>">
+														<span class="icon-i-info"><span class="path1"></span><span class="path2"></span></span>
+													</div>
+												</div>
+											</div>
+											<hr class="pb-4 pt-2">
+											<div class="calculator-item-content px-lg-3">
+												<div class="row">
+													<div class="col">
+														<button type="button" class="btn btn-add mx-auto">
+															<div class="i-plus mr-md-2">
+																<svg>
+																	<use xlink:href="@img/icons/icons.svg#i-plus"></use>
+																</svg>
+															</div>
+															<span class="mb-2 mb-md-0">Добавить еще дверь</span>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="right-sidebar col-12 col-lg-6">
+									<div id="calculator-sidebar" class="calculator-sidebar">
+										<div id="calculator-order-info" class="calculator-order-info">
+											<h4>Результаты</h4>
+											<hr class="my-4">
+											<a href="#" class="table-product d-flex mb-8">
+												<div class="table-product-image mr-3 d-block">
+													<img src="img/wallpaper/wallpaper-1.jpeg" alt="img">
+												</div>
+												<div class="table-product-info d-flex flex-column justify-content-between">
+													<div class="table-product-name h4 mb-0">
+														Paradise, Rise and Shine. Peel and Stick
+													</div>
+													<div class="table-price">
+														<span>1799 грн</span>. /рул.
+													</div>
+												</div>
+											</a>
+											<div class="calculator-order-result d-flex flex-column flex-sm-row justify-content-between mb-2 mb-sm-0">
+												<div class="calculator-order-result-item calculator-order-result-roll text-center mb-3 p-5">
+													<div class="count">12</div>
+													<div class="descr">Количество рулонов</div>
+												</div>
+												<!-- <div class="calculator-order-result-item-inner"> -->
+												<div class="calculator-order-result-item calculator-order-result-square-m text-center mb-3 p-5">
+													<div class="count">64</div>
+													<div class="descr">Количество кв. м обоев</div>
+												</div>
+												<div class="calculator-order-result-item calculator-order-result-gluing-area text-center mb-3 p-5">
+													<div class="count">57</div>
+													<div class="descr">Площадь оклейки кв. м</div>
+												</div>
+											</div>
+											<div class="calculator-order-button-wrap d-flex flex-column flex-md-row">
+												<button type="button" class="btn btn-black-custom mb-2 mb-md-0 mr-md-2">В корзину (арт. <soan class="table-product-code">291093</soan>)</button>
+												<button type="button" class="btn btn-outline-black-custom btn-calculator-order-clear">Сбросить</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		@@include('html/footer.html',{})
+	</div>
+	@@include('html/scripts.html',{})
+</body>
+
+</html>

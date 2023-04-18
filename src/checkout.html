@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Checkout"
+})
+
+<body>
+	<div id="wrapper" class="wrapper">
+		@@include('html/header.html',{})
+		<main id="checkout" class="checkout">
+			<div class="content">
+				<div class="entry-content">
+					<div class="container">
+						<div class="row checkout-main mb-lg-4" id="checkout-main">
+							<div class="left-content col-auto">
+								@@include('html/parts/checkout/order-data.html')
+							</div>
+							<div class="right-sidebar col-auto mb-16 mb-lg-0">
+								@@include('html/parts/checkout/order-info.html')
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		@@include('html/footer.html',{})
+	</div>
+	@@include('html/scripts.html',{})
+</body>
+
+</html>

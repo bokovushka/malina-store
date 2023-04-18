@@ -2,11 +2,17 @@
 
 //default style
 @import "files/fonts";
+@import "files/fonts-svg";
 @import "my-styles/_mixins";
 
 html,
 body {
 	height: 100%;
+	&::-webkit-scrollbar,
+	&::-webkit-scrollbar-thumb {
+		all: unset;
+		width: 0;
+	}
 }
 .wrapper {
 	margin: 0 auto;
@@ -33,7 +39,7 @@ body.lock {
 	}
 }
 
-@import "page-typografy";
+@import "typografy";
 
 //?include header=======================================================================================================//
 @import "parts/header";
@@ -46,9 +52,13 @@ body.lock {
 @import "archive-blog";
 @import "single-blog";
 @import "single-product";
-@import "busket";
-@import "page-checkout";
-@import "page-thanks";
+@import "basket";
+@import "checkout";
+@import "thanks";
+@import "calculator";
+@import "wish-list";
+@import "collection";
+@import "single-brand";
 //!=====================================================================================================================//
 
 //?include footer=======================================================================================================//

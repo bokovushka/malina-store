@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Basket"
+})
+
+<body>
+	<div id="wrapper" class="wrapper">
+		@@include('html/header.html',{})
+		<main id="page-cart" class="page-cart">
+			<div class="content">
+				<div class="entry-content">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<div class="list-product-title head mt-4 mt-md-0 mb-2 mb-lg-5">
+									Корзина
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="left-content col-12 col-lg-auto">
+								@@include('html/parts/basket/list-product.html')
+							</div>
+							<div class="right-sidebar sticky-wrap col-12 col-lg-auto d-lg-flex justify-content-lg-end mb-8 mb-lg-0">
+								@@include('html/parts/basket/total-info.html')
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-auto basket-will-need-wrap">
+								@@include('html/parts/basket/will-need.html')
+							</div>
+						</div>
+					</div>
+					@@include('html/parts/discount.html')
+				</div>
+			</div>
+		</main>
+		@@include('html/footer.html',{})
+	</div>
+	@@include('html/scripts.html',{})
+</body>
+
+</html>

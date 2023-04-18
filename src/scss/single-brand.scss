@@ -1,0 +1,80 @@
+//single-brand
+.single-brand {
+	.cards-products .card-product .card-content .card-link-image {
+		max-height: 320px;
+	}
+}
+.single-brand-banner-top {
+	.hidden-text {
+		overflow: hidden;
+	}
+}
+.single-brand-banner-top-content {
+	margin-bottom: 180px;
+	height: 600px;
+	@include sm-max {
+		height: 285px;
+	}
+	&.emty-pic {
+		height: auto;
+		margin-bottom: 60px;
+		.main-pic {
+			display: none;
+		}
+		.single-brand-logo {
+			position: static;
+			transform: unset;
+			margin: 0 auto;
+		}
+	}
+	.main-pic {
+		height: 100%;
+		object-fit: cover;
+		object-position: 0 45%;
+	}
+	img {
+		height: 100%;
+		object-fit: cover;
+	}
+	.single-brand-logo {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: -120px;
+		background: #fff;
+		max-width: 300px;
+		z-index: 2;
+		border: 1px solid #f0f0f0;
+		@include sm-max {
+			width: 70%;
+		}
+	}
+}
+.collection-all {
+	.collection-other-list {
+		row-gap: 64px;
+	}
+}
+.brand-other {
+	.btn-outline-black-custom {
+		max-width: 320px;
+		width: 100%;
+		margin-bottom: 150px;
+	}
+}
+.brand-other-list {
+	.brand-other-item {
+		width: 20%;
+		padding: 30px 20px;
+		@include lg-max {
+			width: calc(100% / 3);
+			padding: 0;
+		}
+		@include sm-max {
+			width: 50%;
+		}
+		@include xs-max {
+			width: 100%;
+		}
+	}
+}

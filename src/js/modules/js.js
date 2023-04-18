@@ -296,28 +296,193 @@ if (window.innerWidth < 768) {
 	});
 }
 
-//? busket page //sticky sidebar
-if (window.innerWidth > 991) {
-	$(function () {
-		var top = $('#busket-total-info').offset().top - parseFloat($('#busket-total-info').css('marginTop').replace(/auto/, 0));
-		var footTop = $('.discount').offset().top - parseFloat($('.discount').css('marginTop').replace(/auto/, 0));
+//! sticky sidebar
+//? basket page //sticky sidebar
+if (window.location.toString().indexOf('basket') > 0) { //добавляє виконання скрипту лиш на певній сторінці
+	if (window.innerWidth > 991) {
+		StickyMove($('.basket-total-info'), $('.discount'));
+	}
+}
 
-		var maxY = footTop - $('#busket-total-info').outerHeight();
+//? sticky sidebar function
+function StickyMove(StickyBlock, DownBlockMove) {
 
-		$(window).scroll(function (evt) {
-			var y = $(this).scrollTop();
-			if (y > top) {
-				if (y < maxY) {
-					$('#busket-total-info').addClass('fixed').removeAttr('style');
-				} else {
-					$('#busket-total-info').removeClass('fixed').css({
-						position: 'absolute',
-						top: (maxY - top) + 'px'
-					});
-				}
+	var top = StickyBlock.offset().top - parseFloat(StickyBlock.css('marginTop').replace(/auto/, 0));
+	var footTop = DownBlockMove.offset().top - parseFloat(DownBlockMove.css('marginTop').replace(/auto/, 0));
+
+	var maxY = footTop - StickyBlock.outerHeight();
+
+	StickyBlock.width($('.sticky-wrap').width()); // задає ширину елемента StickyBlock відносно sticky-wrap
+
+	$(window).scroll(function (evt) {
+		var y = $(this).scrollTop();
+		if (y > top) {
+			if (y < maxY) {
+				StickyBlock.addClass('fixed').removeAttr('style');
+				StickyBlock.width($('.sticky-wrap').width()); // задає ширину елемента StickyBlock відносно sticky-wrap
 			} else {
-				$('#busket-total-info').removeClass('fixed');
+				StickyBlock.removeClass('fixed').css({
+					position: 'absolute',
+					top: (maxY - top) + 'px'
+				});
 			}
-		});
+		} else {
+			StickyBlock.removeClass('fixed');
+		}
 	});
+};
+
+
+//? checkout datepicker arrow
+setInterval(function () {
+	if ($('.checkout-delivery-accordion #datepicker').hasClass("active")) {
+		$(".checkout-delivery-accordion .datepicker").addClass("active");
+	}
+	else {
+		$(".checkout-delivery-accordion .datepicker").removeClass("active");
+	}
+}, 100);
+
+//? checkout btn-time active
+$(function () {
+	$('.delivery-time-buttons li').click(function () {
+		$('.delivery-time-buttons li').removeClass("active");
+		$(this).addClass("active");
+	});
+});
+
+//! sticky sidebar flex
+//? sticky checkout sidebar
+if (window.location.toString().indexOf('checkout') > 0) { //добавляє виконання скрипту лиш на певній сторінці
+	if (window.innerWidth > 991) {
+		var StickyWrapper = document.getElementById("checkout-main"), StickyMain = document.getElementById("checkout-order-data"), StickySidebar = document.getElementById("checkout-order-info"), StickySidebarContent = document.getElementById("checkout-sidebar");
+		StickyMoveFlex(StickyWrapper, StickyMain, StickySidebar, StickySidebarContent);
+	}
+}
+
+//? sticky calculator sidebar
+if (window.location.toString().indexOf('calculator') > 0) { //добавляє виконання скрипту лиш на певній сторінці
+	if (window.innerWidth > 991) {
+		var StickyWrapper = document.getElementById("calculator-main"), StickyMain = document.getElementById("calculator-order-data"), StickySidebar = document.getElementById("calculator-order-info"), StickySidebarContent = document.getElementById("calculator-sidebar");
+		StickyMoveFlex(StickyWrapper, StickyMain, StickySidebar, StickySidebarContent);
+	}
+}
+
+//? sticky wish-list sidebar
+if (window.location.toString().indexOf('wish-list') > 0) { //добавляє виконання скрипту лиш на певній сторінці
+	if (window.innerWidth > 991) {
+		var StickyWrapper = document.getElementById("wish-list-main"), StickyMain = document.getElementById("wish-list-data"), StickySidebar = document.getElementById("wish-list-sidebar-info"), StickySidebarContent = document.getElementById("wish-list-sidebar");
+		StickyMoveFlex(StickyWrapper, StickyMain, StickySidebar, StickySidebarContent);
+	}
+}
+
+//? sticky sidebar flex function 
+
+function StickyMoveFlex(StickyWrapper, StickyMain, StickySidebar, StickySidebarContent) {
+	window.onscroll = function () {
+		StickySidebar.setAttribute("style", "display:block;width:" + StickySidebarContent.offsetWidth + "px");
+		StickySidebar.style.width = StickySidebarContent.offsetWidth;
+		//if sidebar smaller than main
+		if (StickySidebar.offsetHeight < StickyMain.offsetHeight) {
+			//if sidebar smaller than screen - stick to top rather than bottom
+			if (StickySidebar.offsetHeight < window.innerHeight) {
+				if ((StickyWrapper.getBoundingClientRect().bottom < (window.innerHeight))
+					&& ((StickyWrapper.getBoundingClientRect().bottom < StickySidebar.offsetHeight))
+				) {
+					StickyWrapper.classList.remove("fix-top-VP");
+					StickyWrapper.classList.add("flex-bottom");
+				}
+				else if (StickyWrapper.getBoundingClientRect().top < 0) {
+					StickyWrapper.classList.add("fix-top-VP");
+					StickyWrapper.classList.remove("flex-bottom");
+				}
+				else {
+					StickyWrapper.classList.remove("fix-top-VP");
+					StickyWrapper.classList.remove("flex-bottom");
+				}
+			}
+			//if wrapper taller than sidebar - stick to bottom
+			else if (StickySidebar.offsetHeight < StickyWrapper.offsetHeight) {
+				if (StickyWrapper.getBoundingClientRect().bottom < (window.innerHeight)) {
+					StickyWrapper.classList.remove("fix-bottom-VP");
+					StickyWrapper.classList.add("flex-bottom");
+				}
+				else if (StickyWrapper.getBoundingClientRect().bottom > (StickySidebar.offsetHeight + window.innerHeight)) {
+					StickyWrapper.classList.remove("fix-bottom-VP");
+					StickyWrapper.classList.remove("flex-bottom");
+				}
+				else {
+					StickyWrapper.classList.add("fix-bottom-VP");
+					StickyWrapper.classList.remove("flex-bottom");
+				}
+			}
+		}
+	}
+}
+
+//? calculator page // vendor-code
+$(".collapse-wish-list-vendor-code .table-product").click(function () {
+	if ($(this).hasClass('active')) {
+		$(this).removeClass('active');
+	}
+	else {
+		$('.collapse-wish-list-vendor-code .table-product').removeClass('active');
+		$(this).addClass('active');
+	}
+});
+
+//? wish list page // ... 
+function shorten(text, maxLength, delimiter, overflow) {
+	delimiter = delimiter || "&hellip;";
+	overflow = overflow || false;
+	var ret = text;
+	if (ret.length > maxLength) {
+		var breakpoint = overflow ? maxLength + ret.substr(maxLength).indexOf(" ") : ret.substr(0, maxLength).lastIndexOf(" ");
+		ret = ret.substr(0, breakpoint) + delimiter;
+	}
+	return ret;
+}
+if (window.innerWidth < 576) {
+	$(function () {
+		var $editedText = $(".wish-list .table-product-name");
+		var text = $editedText.text();
+		$editedText.text(shorten(text, 26, " ...", false));
+	});
+}
+
+//? single-brand //read more
+readMore($('.spoiler'), 3);
+
+function readMore(jObj, lineNum) {
+	if (isNaN(lineNum)) {
+		lineNum = 2;
+	}
+	var go = new ReadMore(jObj, lineNum);
+}
+
+//class
+function ReadMore(_jObj, lineNum) {
+	var READ_MORE_LABEL = 'Читать больше';
+	var HIDE_LABEL = 'Скрыть';
+
+	var jObj = _jObj;
+	var textMinHeight = '' + (parseInt(jObj.children('.hidden-text').css('line-height'), 10) * lineNum) + 'px';
+	var textMaxHeight = '' + jObj.children('.hidden-text').css('height');
+
+	jObj.children('.hidden-text').css('height', '' + textMaxHeight);
+	jObj.children('.hidden-text').css('transition', 'height .5s');
+	jObj.children('.hidden-text').css('height', '' + textMinHeight);
+
+	jObj.append('<button class="btn btn-outline-black-custom btn-read-more d-block mx-auto py-1 px-5">' + READ_MORE_LABEL + '</button>');
+
+	jObj.children('.btn-read-more').click(function () {
+		if (jObj.children('.hidden-text').css('height') === textMinHeight) {
+			jObj.children('.hidden-text').css('height', '' + textMaxHeight);
+			jObj.children('.btn-read-more').html(HIDE_LABEL).addClass('active');
+		} else {
+			jObj.children('.hidden-text').css('height', '' + textMinHeight);
+			jObj.children('.btn-read-more').html(READ_MORE_LABEL).removeClass('active');
+		}
+	});
+
 }

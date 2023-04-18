@@ -1,0 +1,367 @@
+<!-- checkout-order-data -->
+<div id="checkout-order-data" class="checkout-order-data">
+	<form class="checkout-order-data-form flex-column mb-10 mb-lg-20">
+		<div class="row flex-column flex-lg-row">
+			<div class="col-12 order-2 order-lg-1">
+				<div class="head mb-8 mb-lg-6 mb-xl-10 text-center text-lg-left">Оформление заказа</div>
+			</div>
+			<div class="col-12 order-lg-2">
+				<div class="h4 mb-4 d-none d-lg-block">Личные данные</div>
+			</div>
+			<div class="col-12 order-3 col-xl-6 order-lg-3">
+				<div class="checkout-personal-data mb-6 mb-xl-0">
+					<div class="row mb-6 d-none d-lg-flex">
+						<div class="col-6">
+							<div class="field mr-n1">
+								<input type="text" class="form-control" id="name" name="name" placeholder="Имя" value="Анастасия">
+								<label class="form-label d-none mb-1" for="name">Имя</span></label>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="field ml-n1">
+								<input type="text" class="form-control" id="surname" name="surname" placeholder="Фамилия">
+								<label class="form-label d-none mb-1" for="surname">Фамилия</span></label>
+							</div>
+						</div>
+					</div>
+					<div class="field mb-5 mb-lg-6 d-flex flex-column-reverse d-lg-none">
+						<input type="text" class="form-control" id="full-name" name="full-name" placeholder="Имя Фамилия">
+						<label class="form-label d-lg-none mb-1" for="full-name">Полное имя</label>
+					</div>
+					<div class="field mb-5 mb-lg-6 mb-xl-10 d-flex flex-column-reverse">
+						<input type="tel" class="form-control" id="tel" name="tel" placeholder="Номер телефона">
+						<label class="form-label d-lg-none mb-1" for="tel">Телефон</label>
+					</div>
+					<div class="field field-error d-flex flex-column">
+						<input type="email" class="form-control" id="email" name="email" placeholder="email" data-toggle="tooltip" title="<span class='help'>Укажи email</span>">
+						<label class="form-label d-lg-none order-first mb-1" for="email">Email</label>
+						<div class="field-error-help-descr">Укажи пожалуйста email для получения статуса заказа </div>
+					</div>
+				</div>
+			</div>
+			<div class="regular-customer col-12 order-1 col-xl-6 order-lg-4 mb-18 mb-lg-0 mt-6 mt-lg-0">
+				<div class="px-xl-2 px-xxl-8">
+					<p>Если уже совершали заказ, войдите с помощью кнопок ниже. Данные автоматически заполнятся и мы сохраним всю информацию по заказу.</p>
+					<button type="button" class="btn btn-black-custom px-9">Я постоянный покупатель</button>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="checkout-delivery d-flex flex-column flex-xl-row pr-xl-18 mt-10 mt-lg-6 mt-xl-12 mt-xxl-26 mb-4 mb-lg14">
+					<div class="h4 mb-4 mb-lg-0 mb-4 mb-lg-0">Доставка</div>
+					<div class="checkout-delivery-accordion w-100 mt-1" id="checkout-delivery-accordion">
+						<div class="card delivery-address">
+							<div class="card-header">
+								<div class="row">
+									<div class="col-12 col-md-7 mb-2 mb-md-0">
+										<div class="custom-control custom-radio mb-0">
+											<input data-toggle="collapse" data-target="#collapse1" type="radio" checked id="delivery-address" name="customRadio" class="custom-control-input" />
+											<label class="custom-control-label" for="delivery-address">Адресная доставка</label>
+										</div>
+									</div>
+									<div class="col-12 col-md-5">
+										<div class="nav-item-info d-flex align-items-center justify-content-between">
+											<div class="delivery-free mr-3">Бесплатно</div>
+											<div class="i-info" data-toggle="tooltip" title="<span class='help'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta fuga quasi numquam nesciunt consequuntur ullam odio iure ut repellat! Libero mollitia perferendis magni minima. Quae pariatur maiores recusandae minima accusantium.</span>">
+												<span class="icon-i-info"><span class="path1"></span><span class="path2"></span></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="collapse1" class="collapse show" data-parent="#checkout-delivery-accordion">
+								<div class="card-body pt-8 px-0 pb-10 mb-4">
+									<div class="delivery-title mb-4">Выбери город доставки:</div>
+									<div class="delivery-title mb-4">Адрес доставки</div>
+									<div class="city-search-wrap">
+										<div class="field city-search mb-4">
+											<input type="text" class="city-select" data-url="assets/city.json" data-load-once="true" name="city-select" />
+										</div>
+										<div class="popular-city mb-10">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">Харьков</div>
+												<div class="swiper-slide">Днепр</div>
+												<div class="swiper-slide">Запорожье</div>
+												<div class="swiper-slide">Львов</div>
+												<div class="swiper-slide">Киев</div>
+												<div class="swiper-slide">Луцк</div>
+											</div>
+											<div class="swiper-scrollbar d-none"></div>
+										</div>
+									</div>
+									<div class="address-search-wrap mb-10 mb-sm-0">
+										<div class="field address-search">
+											<input type="text" class="address-select" data-url="assets/address.json" data-load-once="true" name="adress-select" />
+										</div>
+										<div class="field field--house">
+											<input type="text" class="form-control" placeholder="Дом">
+										</div>
+										<div class="field field--apart">
+											<input type="text" class="form-control" placeholder="№ кв.">
+										</div>
+										<div class="field field--floor">
+											<input type="text" class="form-control" placeholder="Этаж">
+										</div>
+										<div class="custom-control custom-checkbox custom-checkbox-lift position-relative d-flex justify-content-end justify-content-sm-start mb-0 order-last order-sm-0">
+											<input type="checkbox" class="custom-control-input" id="lift">
+											<label class="custom-control-label" for="lift">Лифт</label>
+										</div>
+										<div class="custom-control custom-checkbox custom-checkbox-save-address position-relative mb-0 mb-sm-10 mt-sm-4">
+											<input type="checkbox" class="custom-control-input" id="save-address">
+											<label class="custom-control-label" for="save-address">Сохранить адрес</label>
+										</div>
+									</div>
+									<div class="delivery-time">
+										<div class="delivery-title mb-4">Дата и время доставки</div>
+										<div class="d-flex flex-column flex-xxxl-row  align-items-xxxl-center justify-content-between">
+											<div class="delivery-time-item mb-4 mb-xxxl-0">
+												<div class="d-flex align-items-center">
+													<div class="delivery-title mr-4 d-none d-md-block">Дата</div>
+													<div class="datepicker">
+														<input id="datepicker" class="flatpickr-input form-control" type="text" placeholder="Выбрать дату" data-input>
+														<a class="input-button" title="toggle" data-toggle>
+															<svg>
+																<use xlink:href="img/icons/icons.svg#i-calendar"></use>
+															</svg>
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="delivery-time-item d-flex align-items-center">
+												<div class="d-flex align-items-center">
+													<div class="delivery-title mr-4 d-none d-md-block">Время</div>
+												</div>
+												<ul class="list-unstyled mb-0 delivery-time-buttons d-flex align-items-center w-100">
+													<li class="active">
+														<button type="button" class="btn">08:00- 12:00</button>
+													</li>
+													<li>
+														<button type="button" class="btn">08:00- 12:00</button>
+													</li>
+													<li>
+														<button type="button" class="btn">08:00- 12:00</button>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card delivery-np">
+							<div class="card-header">
+								<div class="row">
+									<div class="col-12 col-md-7 mb-2 mb-md-0">
+										<div class="custom-control custom-radio mb-0">
+											<input data-toggle="collapse" data-target="#collapse2" type="radio" id="customRadio2" name="customRadio" class="custom-control-input" />
+											<label class="custom-control-label" for="customRadio2">
+												<div class="i-np mr-2">
+													<svg>
+														<use xlink:href="img/icons/icons.svg#i-np"></use>
+													</svg>
+												</div>
+												Доставка в отделение, Новая Почта
+											</label>
+										</div>
+									</div>
+									<div class="col-12 col-md-5">
+										<div class="nav-item-info d-flex align-items-center justify-content-between">
+											<div class="delivery-free mr-3">Бесплатно</div>
+											<div class="i-info" data-toggle="tooltip" title="<span class='help'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta fuga quasi numquam nesciunt consequuntur ullam odio iure ut repellat! Libero mollitia perferendis magni minima. Quae pariatur maiores recusandae minima accusantium.</span>">
+												<span class="icon-i-info"><span class="path1"></span><span class="path2"></span></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="collapse2" class="collapse" data-parent="#checkout-delivery-accordion">
+								<div class="card-body pt-8 px-0 pb-10 mb-4 d-none">
+									// Collapse 2 content
+								</div>
+							</div>
+						</div>
+						<div class="card delivery-ukr">
+							<div class="card-header">
+								<div class="row">
+									<div class="col-12 col-md-7 mb-2 mb-md-0">
+										<div class="custom-control custom-radio mb-0">
+											<input data-toggle="collapse" data-target="#collapse3" type="radio" id="customRadio3" name="customRadio" class="custom-control-input" />
+											<label class="custom-control-label" for="customRadio3">
+												<div class="i-ukr mr-2">
+													<svg>
+														<use xlink:href="img/icons/icons.svg#i-ukr"></use>
+													</svg>
+												</div>
+												Доставка в отделение, Укрпочта
+											</label>
+										</div>
+									</div>
+									<div class="col-12 col-md-5">
+										<div class="nav-item-info d-flex align-items-center justify-content-between">
+											<div class="delivery-free mr-3">Бесплатно</div>
+											<div class="i-info" data-toggle="tooltip" title="<span class='help'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta fuga quasi numquam nesciunt consequuntur ullam odio iure ut repellat! Libero mollitia perferendis magni minima. Quae pariatur maiores recusandae minima accusantium.</span>">
+												<span class="icon-i-info"><span class="path1"></span><span class="path2"></span></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="collapse3" class="collapse" data-parent="#checkout-delivery-accordion">
+								<div class="card-body pt-8 px-0 pb-10 mb-4 d-none">
+									// Collapse 3 content
+								</div>
+							</div>
+						</div>
+						<div class="card delivery-self">
+							<div class="row">
+								<div class="col-12 col-md-7 mb-2 mb-md-0">
+									<div class="card-header">
+										<div class="custom-control custom-radio mb-0">
+											<input data-toggle="collapse" data-target="#collapse4" type="radio" id="customRadio4" name="customRadio" class="custom-control-input" />
+											<label class="custom-control-label" for="customRadio4">Самовывоз из нашего магазина
+												<div class="info-map mb-2">
+													<svg>
+														<use xlink:href="img/icons/icons.svg#i-pin"></use>
+													</svg>
+													<a href="##">ул. Михаила Максимовича, 24</a>
+												</div>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-5">
+									<div class="nav-item-info d-flex align-items-center justify-content-between">
+										<div class="delivery-free mr-3">Бесплатно</div>
+										<div class="i-info" data-toggle="tooltip" title="<span class='help'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta fuga quasi numquam nesciunt consequuntur ullam odio iure ut repellat! Libero mollitia perferendis magni minima. Quae pariatur maiores recusandae minima accusantium.</span>">
+											<span class="icon-i-info"><span class="path1"></span><span class="path2"></span></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="collapse4" class="collapse" data-parent="#checkout-delivery-accordion">
+								<div class="card-body pt-8 px-0 pb-10 mb-4 d-none">
+									// Collapse 4 content
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="checkout-delivery d-flex flex-column flex-xl-row checkout-payment pr-xl-18 mb-10 mb-lg-20">
+					<div class="h4 mb-4 mb-lg-0">Оплата</div>
+					<div class="w-100">
+						<div class="row mt-1">
+							<div class="col-10">
+								<div class="delivery-title mb-4">Оплата при получении:</div>
+								<div class="custom-control custom-radio mb-0">
+									<input type="radio" checked id="payment-cash" name="customRadioPayment" class="custom-control-input" />
+									<label class="custom-control-label" for="payment-cash">Наличными</label>
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="i-info ml-auto" data-toggle="tooltip" title="<span class='help'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta fuga quasi numquam nesciunt consequuntur ullam odio iure ut repellat! Libero mollitia perferendis magni minima. Quae pariatur maiores recusandae minima accusantium.</span>" text-right">
+									<span class="icon-i-info"><span class="path1"></span><span class="path2"></span></span>
+								</div>
+							</div>
+						</div>
+						<div class="w-100 mb-6"></div>
+						<div class="row">
+							<div class="col-10">
+								<div class="custom-control custom-radio mb-0">
+									<input type="radio" id="payment-card" name="customRadioPayment" class="custom-control-input" />
+									<label class="custom-control-label" for="payment-card">Оплата картой Visa / MasterCard</label>
+								</div>
+							</div>
+						</div>
+						<div class="w-100 mb-6"></div>
+						<div class="row">
+							<div class="col-10">
+								<div class="custom-control custom-radio mb-0">
+									<input type="radio" id="payment-online" name="customRadioPayment" class="custom-control-input" />
+									<label class="custom-control-label" for="payment-online">Онлайн оплата (Apple Pay / Google Pay / Visa / MasterСard)<br>
+										<span class="custom-control--label-descr">Оплатите сразу после оформления заказа на сайте</span>
+									</label>
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="i-info ml-auto" data-toggle="tooltip" title="<span class='help'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta fuga quasi numquam nesciunt consequuntur ullam odio iure ut repellat! Libero mollitia perferendis magni minima. Quae pariatur maiores recusandae minima accusantium.</span>" text-right">
+									<span class="icon-i-info"><span class="path1"></span><span class="path2"></span></span>
+								</div>
+							</div>
+						</div>
+						<div class="w-100 mb-6"></div>
+						<div class="row">
+							<div class="col-10">
+								<div class="custom-control custom-radio mb-0">
+									<input type="radio" id="payment-part" name="customRadioPayment" class="custom-control-input" />
+									<label class="custom-control-label" for="payment-part">Оплата частями<br>
+										<span class="custom-control--label-descr">Рассрочка от Monobank, ПриватБанк, А-банк</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="w-100 mb-6"></div>
+						<div class="row">
+							<div class="col-10">
+								<div class="custom-control custom-radio mb-0">
+									<input type="radio" id="payment-privat" name="customRadioPayment" class="custom-control-input" />
+									<label class="custom-control-label" for="payment-privat">Мгновенная рассрочка от ПриватБанк<br>
+										<span class="custom-control--label-descr">До 23 платежей. Комиссия составит 2,9% ежемесячно от стоимости товара.</span>
+									</label>
+								</div>
+							</div>
+							<div class="col-2">
+								<div class="i-info ml-auto" data-toggle="tooltip" title="<span class='help'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta fuga quasi numquam nesciunt consequuntur ullam odio iure ut repellat! Libero mollitia perferendis magni minima. Quae pariatur maiores recusandae minima accusantium.</span>" text-right">
+									<span class="icon-i-info"><span class="path1"></span><span class="path2"></span></span>
+								</div>
+							</div>
+						</div>
+						<div class="w-100 mb-6"></div>
+						<div class="row">
+							<div class="col-10">
+								<div class="custom-control custom-radio mb-0">
+									<input type="radio" id="payment-cashless" name="customRadioPayment" class="custom-control-input" />
+									<label class="custom-control-label" for="payment-cashless">Безналичный расчет<br>
+										<span class="custom-control--label-descr">Отправим счет с НДС удобным способом</span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="checkout-delivery d-flex flex-column flex-xl-row checkout-recipient pr-xl-18">
+					<div class="h4 mb-4 mb-lg-0">Получатель</div>
+					<div class="w-100">
+						<div class="row mt-1">
+							<div class="col-3 col-xxl-4">
+								<div class="custom-control custom-radio mb-0">
+									<input type="radio" checked id="recipient-user" name="customRadioRecipient" class="custom-control-input" />
+									<label class="custom-control-label" for="recipient-user">Я</label>
+								</div>
+							</div>
+							<div class="col-7 col-xxl-4">
+								<div class="custom-control custom-radio mb-0">
+									<input type="radio" id="recipient-other" name="customRadioRecipient" class="custom-control-input" />
+									<label class="custom-control-label" for="recipient-other">Другой человек</label>
+								</div>
+							</div>
+							<div class="col-2 offset-xxl-2">
+								<div class="i-info ml-auto" data-toggle="tooltip" title="<span class='help'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta fuga quasi numquam nesciunt consequuntur ullam odio iure ut repellat! Libero mollitia perferendis magni minima. Quae pariatur maiores recusandae minima accusantium.</span>" text-right">
+									<span class="icon-i-info"><span class="path1"></span><span class="path2"></span></span>
+								</div>
+							</div>
+							<div class="w-100 mb-4"></div>
+							<div class="col">
+								<div class="delivery-title mb-4 d-none d-lg-block">Комментарий к заказу</div>
+								<div class="field mb-4">
+									<textarea class="form-control h-100" rows="4" placeholder="Текст сообщения"></textarea>
+								</div>
+								<button type="button" class="btn btn-black-custom btn-checkout-submit">Подтвердить заказ</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

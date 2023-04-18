@@ -105,8 +105,8 @@ var SwiperSingleWallpaper = new Swiper('.swiper-single-wallpaper', {
 // 	});
 // }
 
-//? swiper-blog-banner-top
-var SwiperBlogBannerTop = new Swiper('.swiper-blog-banner-top', {
+//? blog-p swiper-blog-banner-top
+var SwiperBlogBannerTop = new Swiper('.blog-p .swiper-blog-banner-top', {
 	grabCursor: true,
 	slidesPerView: 1.5,
 	centeredSlides: true,
@@ -114,11 +114,39 @@ var SwiperBlogBannerTop = new Swiper('.swiper-blog-banner-top', {
 	// initialSlide: 1,
 	loop: true,
 	navigation: {
-		nextEl: ".blog-banner-top .swiper-buttons .button-slider-next",
-		prevEl: ".blog-banner-top .swiper-buttons .button-slider-prev",
+		nextEl: ".blog-p .blog-banner-top .swiper-buttons .button-slider-next",
+		prevEl: ".blog-p .blog-banner-top .swiper-buttons .button-slider-prev",
 	},
 	pagination: {
-		el: ".blog-banner-top .swiper-pagination",
+		el: ".blog-p .blog-banner-top .swiper-pagination",
+		clickable: true,
+	},
+	breakpoints: {
+		992: {},
+		768: {
+			spaceBetween: 16,
+		},
+		375: {
+			spaceBetween: 10,
+			slidesPerView: 1.1,
+		}
+	}
+});
+
+//? collection-p swiper-blog-banner-top
+var SwiperBlogBannerTop = new Swiper('.collection-p .swiper-blog-banner-top', {
+	grabCursor: true,
+	slidesPerView: 1.5,
+	centeredSlides: true,
+	spaceBetween: 32,
+	// initialSlide: 1,
+	loop: true,
+	navigation: {
+		nextEl: ".collection-p .blog-banner-top .swiper-buttons .button-slider-next",
+		prevEl: ".collection-p .blog-banner-top .swiper-buttons .button-slider-prev",
+	},
+	pagination: {
+		el: ".collection-p .blog-banner-top .swiper-pagination",
 		clickable: true,
 	},
 	breakpoints: {
@@ -273,4 +301,18 @@ var SwiperWillNeed = new Swiper('.swiper-will-need', {
 			slidesPerGroup: 2,
 		},
 	}
+});
+
+//? popular-city swiper
+var NavBlogCategory = new Swiper(".popular-city", {
+	// direction: "vertical",
+	slidesPerView: "auto",
+	spaceBetween: 30,
+	freeMode: true,
+	grabCursor: true,
+	scrollbar: {
+		el: ".popular-city .swiper-scrollbar",
+		// draggable: true,
+	},
+	mousewheel: true,
 });
