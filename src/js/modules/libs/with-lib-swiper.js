@@ -316,3 +316,34 @@ var NavBlogCategory = new Swiper(".popular-city", {
 	},
 	mousewheel: true,
 });
+
+//? swiper-single-brand
+var SwiperSingleBrand = new Swiper(".single-brand-slider .swiper-single-brand", {
+	// slidesPerView: 'auto',
+	slidesPerView: 'auto',
+	spaceBetween: 40,
+	grabCursor: true,
+	loop: true,
+	centeredSlides: true,
+	navigation: {
+		nextEl: '.single-brand-slider .button-slider-next',
+		prevEl: '.single-brand-slider .button-slider-prev',
+	},
+	pagination: {
+		el: '.single-brand-slider .swiper-pagination',
+		type: 'fraction',
+	},
+	breakpoints: {
+		992: {},
+		576: {
+			centeredSlides: false,
+			spaceBetween: 16,
+		},
+		375: {
+			centeredSlides: false,
+			slidesPerView: 1.6,
+			spaceBetween: 12,
+		},
+
+	},
+});

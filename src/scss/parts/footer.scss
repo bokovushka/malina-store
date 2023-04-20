@@ -114,15 +114,6 @@
 		width: 100%;
 	}
 }
-
-#modal-visit {
-	.btn-dark {
-		min-width: 390px;
-		@include xs-max {
-			min-width: 100%;
-		}
-	}
-}
 .footer-center-side {
 	a {
 		display: initial;

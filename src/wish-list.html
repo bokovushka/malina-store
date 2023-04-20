@@ -723,13 +723,14 @@
 													<use xlink:href="img/icons/icons.svg#i-calc"></use>
 												</svg>
 											</div>
-											<div class="btn btn-black-custom w-100">Перейти в калькулятор</div>
+											<a href="##" class="btn btn-black-custom w-100">Перейти в калькулятор</a>
 										</div>
 										<div class="wish-list-sidebar-item text-center py-4 px-4 px-xxl-10 ml-xxl-8">
 											<div class="wish-list-sidebar-item-title mb-5">В <a href="##" class="btn p-0 btn-ahead-page">шоуруме</a> выбирать намного проще. Приезжай и убедись!</div>
 											<div class="d-flex flex-column">
-												<a href="##" class="btn btn-black-custom mb-2">Посетить шоурум</a>
-												<a href="##" class="btn btn-outline-black-custom">Пригласить дизайнера с образцами</a>
+												<button type="button" data-toggle="modal" data-target="#modal-visit" class="btn btn-black-custom mb-2">Посетить шоурум</button>
+												<button type="button" data-toggle="modal" data-target="#modal-taxi" class="btn btn-black-custom mb-2">Заказать такси в шоурум</button>
+												<button type="button" data-toggle="modal" data-target="#modal-designer" class="btn btn-outline-black-custom">Пригласить дизайнера с образцами</button>
 											</div>
 										</div>
 									</div>
@@ -742,6 +743,9 @@
 		</main>
 		@@include('html/footer.html',{})
 	</div>
+	@@include('html/popup/popup-modal-designer.html',{})
+	@@include('html/popup/popup-modal-taxi.html',{})
+
 	@@include('html/scripts.html',{})
 </body>
 

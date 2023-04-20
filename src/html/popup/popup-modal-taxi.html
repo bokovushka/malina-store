@@ -1,0 +1,117 @@
+<!-- Modal-visit -->
+<div class="modal fade modal-custom" id="modal-taxi" tabindex="-1">
+	<div class="modal-dialog modal-lg modal-dialog-centered">
+		<div class="modal-content">
+			<button type="button" class="btn btn-close p-0" data-dismiss="modal" aria-label="Close">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#i-close"></use>
+				</svg>
+			</button>
+			<div class="left-side">
+				<img src="img/modal-taxi.svg" alt="modal">
+			</div>
+			<div class="modal-body">
+				<form>
+					<div class="modal-text text-center mb-5">
+						<div class="h3 mb-2 pr-5">
+							Заказать такси в шоурум
+						</div>
+						<div class="modal-subtext">
+							Услуга ограничена и доступна для заказа только с “сегодня на сегодня”
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-12 col-lg-6 mb-3 mb-lg-0">
+								<div class="field">
+									<label for="name" class="custom-control-label2">Имя</label>
+									<input type="text" class="form-control" id="name" placeholder="Имя">
+								</div>
+							</div>
+							<div class="col-12 col-lg-6">
+								<div class="field">
+									<label for="phone" class="custom-control-label2">Телефон</label>
+									<input type="tel" class="form-control phone" id="phone" placeholder="+38(0__)___-__-__">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-12 col-lg-6  mb-3 mb-lg-0">
+								<label for="date" class="custom-control-label2">Время посещения</label>
+								<div class="input-date">
+									<div class="d-flex align-items-center">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#i-watch"></use>
+										</svg>
+										<div class="custom-control-number custom-control-number--time">
+											c 10:00
+										</div>
+									</div>
+									<div class="custom-control-number custom-control-number--date">
+										<div class="before"></div>
+										<input type="number" class="form-control" min="10" max="20" value="">
+										<div class="minus-plus">
+											<span class="counter plus"></span>
+											<span class="counter minus"></span>
+										</div>
+									</div>
+									<div class="custom-control-number custom-control-number--date">
+										<div class="before"></div>
+										<input type="number" class="form-control" min="0" max="59" value="">
+										<div class="minus-plus">
+											<span class="counter plus"></span>
+											<span class="counter minus"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-lg-6">
+								<label class="custom-control-label2">Город</label>
+								<div class="filter-item--static-city">
+									<select class="select-static-city" name="select-static-city">
+										<option value="city1">Киев</option>
+										<option value="city2">Львов</option>
+										<option value="city3">Одесса</option>
+										<option value="city4">Луцк</option>
+										<option value="city5">Ровно</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-12 col-lg-6 mb-3 mb-lg-0">
+								<div class="field">
+									<label for="address-taxi" class="custom-control-label2">Адрес подачи машины</label>
+									<input type="text" class="form-control" id="address-taxi" placeholder="Укажи адрес">
+								</div>
+							</div>
+							<div class="col-12 col-lg-6">
+								<div class="field">
+									<label for="parade" class="custom-control-label2">Парадное</label>
+									<input type="tel" class="form-control phone" id="parade" placeholder="№ парадного">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col">
+								<div class="field">
+									<label for="address" class="custom-control-label2">Комментарий</label>
+									<textarea class="form-control h-100" rows="2" placeholder="Текст сообщения"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wrapper-submit mt-6 mt-sm-8 d-flex justify-content-center">
+						<button type="submit" class="btn btn-black-custom">Отправить</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

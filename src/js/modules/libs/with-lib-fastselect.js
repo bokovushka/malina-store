@@ -53,3 +53,10 @@ $('.select-wallpaper-width').fastselect({
 	noResultsText: 'Не найдено',
 }
 );
+
+//? popup-modal-taxi
+$('.select-static-city').fastselect({
+	searchPlaceholder: 'Поиск города',
+	noResultsText: 'Не найдено',
+}
+);

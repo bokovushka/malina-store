@@ -121,6 +121,12 @@
 		.collection-other-logo {
 			max-width: 160px;
 			margin: 0 auto;
+			@include sm-max {
+				img {
+					height: 80px;
+					object-fit: cover;
+				}
+			}
 		}
 	}
 }

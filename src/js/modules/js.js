@@ -460,7 +460,6 @@ function readMore(jObj, lineNum) {
 	var go = new ReadMore(jObj, lineNum);
 }
 
-//class
 function ReadMore(_jObj, lineNum) {
 	var READ_MORE_LABEL = 'Читать больше';
 	var HIDE_LABEL = 'Скрыть';
@@ -473,7 +472,7 @@ function ReadMore(_jObj, lineNum) {
 	jObj.children('.hidden-text').css('transition', 'height .5s');
 	jObj.children('.hidden-text').css('height', '' + textMinHeight);
 
-	jObj.append('<button class="btn btn-outline-black-custom btn-read-more d-block mx-auto py-1 px-5">' + READ_MORE_LABEL + '</button>');
+	jObj.append('<button class="btn btn-outline-black-custom btn-read-more d-block mx-auto py-2 py-lg-1 px-5">' + READ_MORE_LABEL + '</button>');
 
 	jObj.children('.btn-read-more').click(function () {
 		if (jObj.children('.hidden-text').css('height') === textMinHeight) {
@@ -484,5 +483,20 @@ function ReadMore(_jObj, lineNum) {
 			jObj.children('.btn-read-more').html(READ_MORE_LABEL).removeClass('active');
 		}
 	});
-
 }
+
+//? brands //all-brands-list
+$('.all-brands-list li.stock').click(function () {
+	$(this).toggleClass("active");
+});
+
+//? brands // all-brands-content
+$(".all-brands-content .all-brands-item").click(function () {
+	if ($(this).hasClass('active')) {
+		$(this).removeClass('active');
+	}
+	else {
+		$('.all-brands-content .all-brands-item').removeClass('active');
+		$(this).addClass('active');
+	}
+});
